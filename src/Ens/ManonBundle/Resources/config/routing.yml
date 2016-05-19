@@ -1,0 +1,3 @@
+ens_manon_homepage:
+    path:     /
+    defaults: { _controller: EnsManonBundle:Default:index }
