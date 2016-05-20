@@ -81,4 +81,8 @@
   'EnsManonBundle:Default:index.html.twig' => 'C:\\wamp\\www\\jobeet\\src\\Ens\\ManonBundle/Resources/views/Default/index.html.twig',
   '::base.html.twig' => 'C:\\wamp\\www\\jobeet\\app/Resources\\views/base.html.twig',
   ':default:index.html.twig' => 'C:\\wamp\\www\\jobeet\\app/Resources\\views/default/index.html.twig',
+  ':job:edit.html.twig' => 'C:\\wamp\\www\\jobeet\\app/Resources\\views/job/edit.html.twig',
+  ':job:index.html.twig' => 'C:\\wamp\\www\\jobeet\\app/Resources\\views/job/index.html.twig',
+  ':job:new.html.twig' => 'C:\\wamp\\www\\jobeet\\app/Resources\\views/job/new.html.twig',
+  ':job:show.html.twig' => 'C:\\wamp\\www\\jobeet\\app/Resources\\views/job/show.html.twig',
 );
