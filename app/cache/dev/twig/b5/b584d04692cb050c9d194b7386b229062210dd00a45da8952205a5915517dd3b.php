@@ -22,20 +22,20 @@ class __TwigTemplate_ff5f69dd78597e7fdd8d53d0d59731e46707e9c16c504c20eab1a23d32f
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_ebd28d6a824a06a35ac788891bec52c9d7761cd7d5dfb20e3ae961d5da77a52f = $this->env->getExtension("native_profiler");
-        $__internal_ebd28d6a824a06a35ac788891bec52c9d7761cd7d5dfb20e3ae961d5da77a52f->enter($__internal_ebd28d6a824a06a35ac788891bec52c9d7761cd7d5dfb20e3ae961d5da77a52f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "job/index.html.twig"));
+        $__internal_e0c6f22a15d7324b69e49b99712d40f0cc1f3750d31cb706fc97e0574138aceb = $this->env->getExtension("native_profiler");
+        $__internal_e0c6f22a15d7324b69e49b99712d40f0cc1f3750d31cb706fc97e0574138aceb->enter($__internal_e0c6f22a15d7324b69e49b99712d40f0cc1f3750d31cb706fc97e0574138aceb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "job/index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_ebd28d6a824a06a35ac788891bec52c9d7761cd7d5dfb20e3ae961d5da77a52f->leave($__internal_ebd28d6a824a06a35ac788891bec52c9d7761cd7d5dfb20e3ae961d5da77a52f_prof);
+        $__internal_e0c6f22a15d7324b69e49b99712d40f0cc1f3750d31cb706fc97e0574138aceb->leave($__internal_e0c6f22a15d7324b69e49b99712d40f0cc1f3750d31cb706fc97e0574138aceb_prof);
 
     }
 
     // line 3
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_709579112a36b7535e351ba8215cdcfa3843051edd4032196dd9dc4c88014201 = $this->env->getExtension("native_profiler");
-        $__internal_709579112a36b7535e351ba8215cdcfa3843051edd4032196dd9dc4c88014201->enter($__internal_709579112a36b7535e351ba8215cdcfa3843051edd4032196dd9dc4c88014201_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_fbe4e5f1254786329b0b99270e629c97f896c480c69b9e2506be3ecd2dc2951c = $this->env->getExtension("native_profiler");
+        $__internal_fbe4e5f1254786329b0b99270e629c97f896c480c69b9e2506be3ecd2dc2951c->enter($__internal_fbe4e5f1254786329b0b99270e629c97f896c480c69b9e2506be3ecd2dc2951c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 4
         echo "    ";
@@ -47,15 +47,15 @@ class __TwigTemplate_ff5f69dd78597e7fdd8d53d0d59731e46707e9c16c504c20eab1a23d32f
         echo "\" type=\"text/css\" media=\"all\" />
 ";
         
-        $__internal_709579112a36b7535e351ba8215cdcfa3843051edd4032196dd9dc4c88014201->leave($__internal_709579112a36b7535e351ba8215cdcfa3843051edd4032196dd9dc4c88014201_prof);
+        $__internal_fbe4e5f1254786329b0b99270e629c97f896c480c69b9e2506be3ecd2dc2951c->leave($__internal_fbe4e5f1254786329b0b99270e629c97f896c480c69b9e2506be3ecd2dc2951c_prof);
 
     }
 
     // line 8
     public function block_content($context, array $blocks = array())
     {
-        $__internal_e786a35502f2c89287ef7cbfacf9fd14a67f66ff85ce1976edd273523d0c1a50 = $this->env->getExtension("native_profiler");
-        $__internal_e786a35502f2c89287ef7cbfacf9fd14a67f66ff85ce1976edd273523d0c1a50->enter($__internal_e786a35502f2c89287ef7cbfacf9fd14a67f66ff85ce1976edd273523d0c1a50_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_135d824cc5853d1e63ac3038b8592de572024a56504ef94f3411c99a97575676 = $this->env->getExtension("native_profiler");
+        $__internal_135d824cc5853d1e63ac3038b8592de572024a56504ef94f3411c99a97575676->enter($__internal_135d824cc5853d1e63ac3038b8592de572024a56504ef94f3411c99a97575676_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 9
         echo "    <div id=\"jobs\">
@@ -89,8 +89,8 @@ class __TwigTemplate_ff5f69dd78597e7fdd8d53d0d59731e46707e9c16c504c20eab1a23d32f
                     <td class=\"position\">
                         <a href=\"";
             // line 15
-            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("job_show", array("id" => $this->getAttribute($context["job"], "id", array()), "company" => $this->getAttribute($context["job"], "company", array()), "location" => $this->getAttribute($context["job"], "location", array()), "position" => $this->getAttribute(            // line 16
-$context["job"], "position", array()))), "html", null, true);
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("job_show", array("id" => $this->getAttribute($context["job"], "id", array()), "company" => $this->getAttribute($context["job"], "companySlug", array()), "location" => $this->getAttribute(            // line 16
+$context["job"], "locationSlug", array()), "position" => $this->getAttribute($context["job"], "positionSlug", array()))), "html", null, true);
             echo "\">
                             ";
             // line 17
@@ -121,7 +121,7 @@ $context["job"], "position", array()))), "html", null, true);
     </div>
 ";
         
-        $__internal_e786a35502f2c89287ef7cbfacf9fd14a67f66ff85ce1976edd273523d0c1a50->leave($__internal_e786a35502f2c89287ef7cbfacf9fd14a67f66ff85ce1976edd273523d0c1a50_prof);
+        $__internal_135d824cc5853d1e63ac3038b8592de572024a56504ef94f3411c99a97575676->leave($__internal_135d824cc5853d1e63ac3038b8592de572024a56504ef94f3411c99a97575676_prof);
 
     }
 
@@ -154,8 +154,8 @@ $context["job"], "position", array()))), "html", null, true);
 /*                 <tr class="{{ cycle(['even', 'odd'], loop.index) }}">*/
 /*                     <td class="location">{{ job.location }}</td>*/
 /*                     <td class="position">*/
-/*                         <a href="{{ path('job_show', { 'id': job.id, 'company': job.company, 'location': job.location,*/
-/*                             'position': job.position }) }}">*/
+/*                         <a href="{{ path('job_show', { 'id': job.id, 'company': job.companySlug,*/
+/*                             'location': job.locationSlug, 'position': job.positionSlug }) }}">*/
 /*                             {{ job.position }}*/
 /*                         </a>*/
 /*                     </td>*/

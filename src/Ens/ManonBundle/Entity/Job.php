@@ -2,6 +2,7 @@
 
 namespace Ens\ManonBundle\Entity;
 
+use Ens\ManonBundle\Utils\Jobeet as Jobeet;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -489,5 +490,20 @@ class Job
     public function setUpdatedAtValue()
     {
         $this->updated_at = new \DateTime();
+    }
+
+    public function getCompanySlug()
+    {
+        return Jobeet::slugify($this->getCompany());
+    }
+
+    public function getPositionSlug()
+    {
+        return Jobeet::slugify($this->getPosition());
+    }
+
+    public function getLocationSlug()
+    {
+        return Jobeet::slugify($this->getLocation());
     }
 }
