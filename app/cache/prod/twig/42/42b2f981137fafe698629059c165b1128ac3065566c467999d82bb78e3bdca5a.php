@@ -8,15 +8,15 @@ class __TwigTemplate_6c31310cf26726a3edd7c331903626159c6fa50a4dfb8eec6fc208a38a3
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("base.html.twig", "job/edit.html.twig", 1);
+        $this->parent = $this->loadTemplate("EnsManonBundle::layout.html.twig", "job/edit.html.twig", 1);
         $this->blocks = array(
-            'body' => array($this, 'block_body'),
+            'content' => array($this, 'block_content'),
         );
     }
 
     protected function doGetParent(array $context)
     {
-        return "base.html.twig";
+        return "EnsManonBundle::layout.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
@@ -25,7 +25,7 @@ class __TwigTemplate_6c31310cf26726a3edd7c331903626159c6fa50a4dfb8eec6fc208a38a3
     }
 
     // line 3
-    public function block_body($context, array $blocks = array())
+    public function block_content($context, array $blocks = array())
     {
         // line 4
         echo "    <h1>Job edit</h1>
@@ -48,7 +48,7 @@ class __TwigTemplate_6c31310cf26726a3edd7c331903626159c6fa50a4dfb8eec6fc208a38a3
         <li>
             <a href=\"";
         // line 13
-        echo $this->env->getExtension('routing')->getPath("ens_job_index");
+        echo $this->env->getExtension('routing')->getPath("job_index");
         echo "\">Back to the list</a>
         </li>
         <li>
@@ -81,9 +81,9 @@ class __TwigTemplate_6c31310cf26726a3edd7c331903626159c6fa50a4dfb8eec6fc208a38a3
         return array (  62 => 18,  57 => 16,  51 => 13,  44 => 9,  39 => 7,  35 => 6,  31 => 4,  28 => 3,  11 => 1,);
     }
 }
-/* {% extends 'base.html.twig' %}*/
+/* {% extends 'EnsManonBundle::layout.html.twig' %}*/
 /* */
-/* {% block body %}*/
+/* {% block content %}*/
 /*     <h1>Job edit</h1>*/
 /* */
 /*     {{ form_start(edit_form) }}*/
@@ -93,7 +93,7 @@ class __TwigTemplate_6c31310cf26726a3edd7c331903626159c6fa50a4dfb8eec6fc208a38a3
 /* */
 /*     <ul>*/
 /*         <li>*/
-/*             <a href="{{ path('ens_job_index') }}">Back to the list</a>*/
+/*             <a href="{{ path('job_index') }}">Back to the list</a>*/
 /*         </li>*/
 /*         <li>*/
 /*             {{ form_start(delete_form) }}*/
@@ -102,4 +102,3 @@ class __TwigTemplate_6c31310cf26726a3edd7c331903626159c6fa50a4dfb8eec6fc208a38a3
 /*         </li>*/
 /*     </ul>*/
 /* {% endblock %}*/
-/* */

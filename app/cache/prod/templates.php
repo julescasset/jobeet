@@ -79,6 +79,7 @@
   'DoctrineBundle:Collector:db.html.twig' => 'C:\\wamp\\www\\jobeet\\vendor\\doctrine\\doctrine-bundle/Resources/views/Collector/db.html.twig',
   'DoctrineBundle:Collector:explain.html.twig' => 'C:\\wamp\\www\\jobeet\\vendor\\doctrine\\doctrine-bundle/Resources/views/Collector/explain.html.twig',
   'EnsManonBundle:Default:index.html.twig' => 'C:\\wamp\\www\\jobeet\\src\\Ens\\ManonBundle/Resources/views/Default/index.html.twig',
+  'EnsManonBundle::layout.html.twig' => 'C:\\wamp\\www\\jobeet\\src\\Ens\\ManonBundle/Resources/views/layout.html.twig',
   '::base.html.twig' => 'C:\\wamp\\www\\jobeet\\app/Resources\\views/base.html.twig',
   ':default:index.html.twig' => 'C:\\wamp\\www\\jobeet\\app/Resources\\views/default/index.html.twig',
   ':job:edit.html.twig' => 'C:\\wamp\\www\\jobeet\\app/Resources\\views/job/edit.html.twig',

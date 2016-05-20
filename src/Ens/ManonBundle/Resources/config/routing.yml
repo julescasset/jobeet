@@ -4,4 +4,4 @@ ens_manon_job:
 
 ens_manon_homepage:
     path:     /
-    defaults: { _controller: EnsManonBundle:Default:index }
+    defaults: { _controller: EnsManonBundle:Job:index }

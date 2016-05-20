@@ -79,6 +79,7 @@
   'DoctrineBundle:Collector:db.html.twig' => 'C:\\wamp\\www\\jobeet\\vendor\\doctrine\\doctrine-bundle/Resources/views/Collector/db.html.twig',
   'DoctrineBundle:Collector:explain.html.twig' => 'C:\\wamp\\www\\jobeet\\vendor\\doctrine\\doctrine-bundle/Resources/views/Collector/explain.html.twig',
   'EnsManonBundle:Default:index.html.twig' => 'C:\\wamp\\www\\jobeet\\src\\Ens\\ManonBundle/Resources/views/Default/index.html.twig',
+  'EnsManonBundle::layout.html.twig' => 'C:\\wamp\\www\\jobeet\\src\\Ens\\ManonBundle/Resources/views/layout.html.twig',
   'DebugBundle:Profiler:dump.html.twig' => 'C:\\wamp\\www\\jobeet\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\DebugBundle/Resources/views/Profiler/dump.html.twig',
   'WebProfilerBundle:Collector:ajax.html.twig' => 'C:\\wamp\\www\\jobeet\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle/Resources/views/Collector/ajax.html.twig',
   'WebProfilerBundle:Collector:config.html.twig' => 'C:\\wamp\\www\\jobeet\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle/Resources/views/Collector/config.html.twig',
