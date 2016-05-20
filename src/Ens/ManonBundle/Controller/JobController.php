@@ -22,10 +22,15 @@ class JobController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $jobs = $em->getRepository('EnsManonBundle:Job')->findAll();
+        $categories = $em->getRepository('EnsManonBundle:Category')->getWithJobs();
+
+        foreach($categories as $category)
+        {
+            $category->setActiveJobs($em->getRepository('EnsManonBundle:Job')->getActiveJobs($category->getId(), 10));
+        }
 
         return $this->render('job/index.html.twig', array(
-            'jobs' => $jobs,
+            'categories' => $categories,
         ));
     }
 
@@ -60,6 +65,10 @@ class JobController extends Controller
     public function showAction(Job $job)
     {
         $deleteForm = $this->createDeleteForm($job);
+
+        $em = $this->getDoctrine()->getManager();
+
+        $job = $em->getRepository('EnsManonBundle:Job')->getActiveJob($job);
 
         return $this->render('job/show.html.twig', array(
             'job' => $job,

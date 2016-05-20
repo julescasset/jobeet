@@ -1,5 +1,6 @@
 Ens\ManonBundle\Entity\Category:
   type: entity
+  repositoryClass: Ens\ManonBundle\Repository\CategoryRepository
   table: category
   id:
     id:
