@@ -1,24 +1,24 @@
-ens_job_index:
+job_index:
     path:     /
     defaults: { _controller: "EnsManonBundle:Job:index" }
     methods:  GET
 
-ens_job_show:
+job_show:
     path:     /{id}/show
     defaults: { _controller: "EnsManonBundle:Job:show" }
     methods:  GET
 
-ens_job_new:
+job_new:
     path:     /new
     defaults: { _controller: "EnsManonBundle:Job:new" }
     methods:  [GET, POST]
 
-ens_job_edit:
+job_edit:
     path:     /{id}/edit
     defaults: { _controller: "EnsManonBundle:Job:edit" }
     methods:  [GET, POST]
 
-ens_job_delete:
+job_delete:
     path:     /{id}/delete
     defaults: { _controller: "EnsManonBundle:Job:delete" }
     methods:  DELETE

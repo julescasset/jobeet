@@ -44,7 +44,7 @@ class JobController extends Controller
             $em->persist($job);
             $em->flush();
 
-            return $this->redirectToRoute('ens_job_show', array('id' => $job->getId()));
+            return $this->redirectToRoute('job_show', array('id' => $job->getId()));
         }
 
         return $this->render('job/new.html.twig', array(
@@ -82,7 +82,7 @@ class JobController extends Controller
             $em->persist($job);
             $em->flush();
 
-            return $this->redirectToRoute('ens_job_edit', array('id' => $job->getId()));
+            return $this->redirectToRoute('job_edit', array('id' => $job->getId()));
         }
 
         return $this->render('job/edit.html.twig', array(
@@ -107,7 +107,7 @@ class JobController extends Controller
             $em->flush();
         }
 
-        return $this->redirectToRoute('ens_job_index');
+        return $this->redirectToRoute('job_index');
     }
 
     /**
@@ -120,7 +120,7 @@ class JobController extends Controller
     private function createDeleteForm(Job $job)
     {
         return $this->createFormBuilder()
-            ->setAction($this->generateUrl('ens_job_delete', array('id' => $job->getId())))
+            ->setAction($this->generateUrl('job_delete', array('id' => $job->getId())))
             ->setMethod('DELETE')
             ->getForm()
         ;

@@ -1,6 +1,6 @@
-{% extends 'base.html.twig' %}
+{% extends 'EnsManonBundle::layout.html.twig' %}
 
-{% block body %}
+{% block content %}
     <h1>Job creation</h1>
 
     {{ form_start(form) }}
@@ -10,7 +10,7 @@
 
     <ul>
         <li>
-            <a href="{{ path('ens_job_index') }}">Back to the list</a>
+            <a href="{{ path('job_index') }}">Back to the list</a>
         </li>
     </ul>
 {% endblock %}
