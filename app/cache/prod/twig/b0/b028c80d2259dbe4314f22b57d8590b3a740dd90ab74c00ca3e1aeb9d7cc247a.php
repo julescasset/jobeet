@@ -8,15 +8,15 @@ class __TwigTemplate_d3a90188393ec4b116df4e09a26502177d25b3833a6cd7437337495b69c
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("base.html.twig", "job/new.html.twig", 1);
+        $this->parent = $this->loadTemplate("EnsManonBundle::layout.html.twig", "job/new.html.twig", 1);
         $this->blocks = array(
-            'body' => array($this, 'block_body'),
+            'content' => array($this, 'block_content'),
         );
     }
 
     protected function doGetParent(array $context)
     {
-        return "base.html.twig";
+        return "EnsManonBundle::layout.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
@@ -25,7 +25,7 @@ class __TwigTemplate_d3a90188393ec4b116df4e09a26502177d25b3833a6cd7437337495b69c
     }
 
     // line 3
-    public function block_body($context, array $blocks = array())
+    public function block_content($context, array $blocks = array())
     {
         // line 4
         echo "    <h1>Job creation</h1>
@@ -48,7 +48,7 @@ class __TwigTemplate_d3a90188393ec4b116df4e09a26502177d25b3833a6cd7437337495b69c
         <li>
             <a href=\"";
         // line 13
-        echo $this->env->getExtension('routing')->getPath("ens_job_index");
+        echo $this->env->getExtension('routing')->getPath("job_index");
         echo "\">Back to the list</a>
         </li>
     </ul>
@@ -70,9 +70,9 @@ class __TwigTemplate_d3a90188393ec4b116df4e09a26502177d25b3833a6cd7437337495b69c
         return array (  51 => 13,  44 => 9,  39 => 7,  35 => 6,  31 => 4,  28 => 3,  11 => 1,);
     }
 }
-/* {% extends 'base.html.twig' %}*/
+/* {% extends 'EnsManonBundle::layout.html.twig' %}*/
 /* */
-/* {% block body %}*/
+/* {% block content %}*/
 /*     <h1>Job creation</h1>*/
 /* */
 /*     {{ form_start(form) }}*/
@@ -82,8 +82,7 @@ class __TwigTemplate_d3a90188393ec4b116df4e09a26502177d25b3833a6cd7437337495b69c
 /* */
 /*     <ul>*/
 /*         <li>*/
-/*             <a href="{{ path('ens_job_index') }}">Back to the list</a>*/
+/*             <a href="{{ path('job_index') }}">Back to the list</a>*/
 /*         </li>*/
 /*     </ul>*/
 /* {% endblock %}*/
-/* */

@@ -10,6 +10,7 @@ class __TwigTemplate_ff5f69dd78597e7fdd8d53d0d59731e46707e9c16c504c20eab1a23d32f
         // line 1
         $this->parent = $this->loadTemplate("EnsManonBundle::layout.html.twig", "job/index.html.twig", 1);
         $this->blocks = array(
+            'stylesheets' => array($this, 'block_stylesheets'),
             'content' => array($this, 'block_content'),
         );
     }
@@ -21,26 +22,46 @@ class __TwigTemplate_ff5f69dd78597e7fdd8d53d0d59731e46707e9c16c504c20eab1a23d32f
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_4a0d85b97fe0dd93635b3cd924fc4668be3bc2c87e023bb7d3615f502542e42b = $this->env->getExtension("native_profiler");
-        $__internal_4a0d85b97fe0dd93635b3cd924fc4668be3bc2c87e023bb7d3615f502542e42b->enter($__internal_4a0d85b97fe0dd93635b3cd924fc4668be3bc2c87e023bb7d3615f502542e42b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "job/index.html.twig"));
+        $__internal_ebd28d6a824a06a35ac788891bec52c9d7761cd7d5dfb20e3ae961d5da77a52f = $this->env->getExtension("native_profiler");
+        $__internal_ebd28d6a824a06a35ac788891bec52c9d7761cd7d5dfb20e3ae961d5da77a52f->enter($__internal_ebd28d6a824a06a35ac788891bec52c9d7761cd7d5dfb20e3ae961d5da77a52f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "job/index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_4a0d85b97fe0dd93635b3cd924fc4668be3bc2c87e023bb7d3615f502542e42b->leave($__internal_4a0d85b97fe0dd93635b3cd924fc4668be3bc2c87e023bb7d3615f502542e42b_prof);
+        $__internal_ebd28d6a824a06a35ac788891bec52c9d7761cd7d5dfb20e3ae961d5da77a52f->leave($__internal_ebd28d6a824a06a35ac788891bec52c9d7761cd7d5dfb20e3ae961d5da77a52f_prof);
 
     }
 
     // line 3
-    public function block_content($context, array $blocks = array())
+    public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_1b2eef644367d24c891d71b577d42518b176078682ea0a5a1bed356a1e12d755 = $this->env->getExtension("native_profiler");
-        $__internal_1b2eef644367d24c891d71b577d42518b176078682ea0a5a1bed356a1e12d755->enter($__internal_1b2eef644367d24c891d71b577d42518b176078682ea0a5a1bed356a1e12d755_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_709579112a36b7535e351ba8215cdcfa3843051edd4032196dd9dc4c88014201 = $this->env->getExtension("native_profiler");
+        $__internal_709579112a36b7535e351ba8215cdcfa3843051edd4032196dd9dc4c88014201->enter($__internal_709579112a36b7535e351ba8215cdcfa3843051edd4032196dd9dc4c88014201_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 4
+        echo "    ";
+        $this->displayParentBlock("stylesheets", $context, $blocks);
+        echo "
+    <link rel=\"stylesheet\" href=\"";
+        // line 5
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/ensmanon/css/jobs.css"), "html", null, true);
+        echo "\" type=\"text/css\" media=\"all\" />
+";
+        
+        $__internal_709579112a36b7535e351ba8215cdcfa3843051edd4032196dd9dc4c88014201->leave($__internal_709579112a36b7535e351ba8215cdcfa3843051edd4032196dd9dc4c88014201_prof);
+
+    }
+
+    // line 8
+    public function block_content($context, array $blocks = array())
+    {
+        $__internal_e786a35502f2c89287ef7cbfacf9fd14a67f66ff85ce1976edd273523d0c1a50 = $this->env->getExtension("native_profiler");
+        $__internal_e786a35502f2c89287ef7cbfacf9fd14a67f66ff85ce1976edd273523d0c1a50->enter($__internal_e786a35502f2c89287ef7cbfacf9fd14a67f66ff85ce1976edd273523d0c1a50_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+
+        // line 9
         echo "    <div id=\"jobs\">
         <table class=\"jobs\">
             ";
-        // line 6
+        // line 11
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["jobs"]) ? $context["jobs"] : $this->getContext($context, "jobs")));
         $context['loop'] = array(
@@ -57,27 +78,28 @@ class __TwigTemplate_ff5f69dd78597e7fdd8d53d0d59731e46707e9c16c504c20eab1a23d32f
             $context['loop']['last'] = 1 === $length;
         }
         foreach ($context['_seq'] as $context["_key"] => $context["job"]) {
-            // line 7
+            // line 12
             echo "                <tr class=\"";
             echo twig_escape_filter($this->env, twig_cycle(array(0 => "even", 1 => "odd"), $this->getAttribute($context["loop"], "index", array())), "html", null, true);
             echo "\">
                     <td class=\"location\">";
-            // line 8
+            // line 13
             echo twig_escape_filter($this->env, $this->getAttribute($context["job"], "location", array()), "html", null, true);
             echo "</td>
                     <td class=\"position\">
                         <a href=\"";
-            // line 10
-            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("job_show", array("id" => $this->getAttribute($context["job"], "id", array()))), "html", null, true);
+            // line 15
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("job_show", array("id" => $this->getAttribute($context["job"], "id", array()), "company" => $this->getAttribute($context["job"], "company", array()), "location" => $this->getAttribute($context["job"], "location", array()), "position" => $this->getAttribute(            // line 16
+$context["job"], "position", array()))), "html", null, true);
             echo "\">
                             ";
-            // line 11
+            // line 17
             echo twig_escape_filter($this->env, $this->getAttribute($context["job"], "position", array()), "html", null, true);
             echo "
                         </a>
                     </td>
                     <td class=\"company\">";
-            // line 14
+            // line 20
             echo twig_escape_filter($this->env, $this->getAttribute($context["job"], "company", array()), "html", null, true);
             echo "</td>
                 </tr>
@@ -94,12 +116,12 @@ class __TwigTemplate_ff5f69dd78597e7fdd8d53d0d59731e46707e9c16c504c20eab1a23d32f
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['job'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 17
+        // line 23
         echo "        </table>
     </div>
 ";
         
-        $__internal_1b2eef644367d24c891d71b577d42518b176078682ea0a5a1bed356a1e12d755->leave($__internal_1b2eef644367d24c891d71b577d42518b176078682ea0a5a1bed356a1e12d755_prof);
+        $__internal_e786a35502f2c89287ef7cbfacf9fd14a67f66ff85ce1976edd273523d0c1a50->leave($__internal_e786a35502f2c89287ef7cbfacf9fd14a67f66ff85ce1976edd273523d0c1a50_prof);
 
     }
 
@@ -115,10 +137,15 @@ class __TwigTemplate_ff5f69dd78597e7fdd8d53d0d59731e46707e9c16c504c20eab1a23d32f
 
     public function getDebugInfo()
     {
-        return array (  98 => 17,  81 => 14,  75 => 11,  71 => 10,  66 => 8,  61 => 7,  44 => 6,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  120 => 23,  103 => 20,  97 => 17,  93 => 16,  92 => 15,  87 => 13,  82 => 12,  65 => 11,  61 => 9,  55 => 8,  46 => 5,  41 => 4,  35 => 3,  11 => 1,);
     }
 }
 /* {% extends 'EnsManonBundle::layout.html.twig' %}*/
+/* */
+/* {% block stylesheets %}*/
+/*     {{ parent() }}*/
+/*     <link rel="stylesheet" href="{{ asset('bundles/ensmanon/css/jobs.css') }}" type="text/css" media="all" />*/
+/* {% endblock %}*/
 /* */
 /* {% block content %}*/
 /*     <div id="jobs">*/
@@ -127,7 +154,8 @@ class __TwigTemplate_ff5f69dd78597e7fdd8d53d0d59731e46707e9c16c504c20eab1a23d32f
 /*                 <tr class="{{ cycle(['even', 'odd'], loop.index) }}">*/
 /*                     <td class="location">{{ job.location }}</td>*/
 /*                     <td class="position">*/
-/*                         <a href="{{ path('job_show', { 'id': job.id }) }}">*/
+/*                         <a href="{{ path('job_show', { 'id': job.id, 'company': job.company, 'location': job.location,*/
+/*                             'position': job.position }) }}">*/
 /*                             {{ job.position }}*/
 /*                         </a>*/
 /*                     </td>*/
