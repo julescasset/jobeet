@@ -2,6 +2,7 @@
 
 namespace Ens\ManonBundle\Entity;
 
+use Ens\ManonBundle\Utils\Jobeet;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -30,6 +31,8 @@ class Category
     private $category_affiliates;
 
     private $active_jobs;
+
+    private $more_jobs;
 
     /**
      * Constructor
@@ -153,4 +156,20 @@ class Category
     {
         return $this->active_jobs;
     }
+
+    public function getSlug()
+    {
+        return Jobeet::slugify($this->getName());
+    }
+
+    public function setMoreJobs($jobs)
+    {
+        $this->more_jobs = $jobs >=  0 ? $jobs : 0;
+    }
+
+    public function getMoreJobs()
+    {
+        return $this->more_jobs;
+    }
+
 }

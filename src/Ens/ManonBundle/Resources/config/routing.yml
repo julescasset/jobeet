@@ -2,6 +2,10 @@ ens_manon_job:
     resource: "@EnsManonBundle/Resources/config/routing/job.yml"
     prefix:   /job
 
+ens_manon_category:
+    path:  /category/{slug}
+    defaults: { _controller: EnsManonBundle:Category:show }
+
 ens_manon_homepage:
     path:     /
     defaults: { _controller: EnsManonBundle:Job:index }
