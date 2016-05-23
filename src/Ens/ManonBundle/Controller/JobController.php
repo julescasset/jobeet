@@ -26,7 +26,8 @@ class JobController extends Controller
 
         foreach($categories as $category)
         {
-            $category->setActiveJobs($em->getRepository('EnsManonBundle:Job')->getActiveJobs($category->getId(), 10));
+            $category->setActiveJobs($em->getRepository('EnsManonBundle:Job')->getActiveJobs($category->getId(), $this->container->getParameter('max_jobs_on_homepage')));
+            $category->setMoreJobs($em->getRepository('EnsManonBundle:Job')->countActiveJobs($category->getId()) - $this->container->getParameter('max_jobs_on_homepage'));
         }
 
         return $this->render('job/index.html.twig', array(
@@ -94,7 +95,7 @@ class JobController extends Controller
             return $this->redirectToRoute('job_edit', array('id' => $job->getId()));
         }
 
-        return $this->render('job/edit.html.twig', array(
+        return $this->render('job/edit.html.twig.', array(
             'job' => $job,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),

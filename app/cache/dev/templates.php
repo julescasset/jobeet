@@ -112,6 +112,7 @@
   'WebProfilerBundle:Profiler:toolbar_redirect.html.twig' => 'C:\\wamp\\www\\jobeet\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle/Resources/views/Profiler/toolbar_redirect.html.twig',
   'WebProfilerBundle:Router:panel.html.twig' => 'C:\\wamp\\www\\jobeet\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle/Resources/views/Router/panel.html.twig',
   '::base.html.twig' => 'C:\\wamp\\www\\jobeet\\app/Resources\\views/base.html.twig',
+  ':category:show.html.twig' => 'C:\\wamp\\www\\jobeet\\app/Resources\\views/category/show.html.twig',
   ':default:index.html.twig' => 'C:\\wamp\\www\\jobeet\\app/Resources\\views/default/index.html.twig',
   ':job:edit.html.twig' => 'C:\\wamp\\www\\jobeet\\app/Resources\\views/job/edit.html.twig',
   ':job:index.html.twig' => 'C:\\wamp\\www\\jobeet\\app/Resources\\views/job/index.html.twig',

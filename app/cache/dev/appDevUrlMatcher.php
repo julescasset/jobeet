@@ -167,6 +167,17 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        // category_show
+        if (0 === strpos($pathinfo, '/category/category') && preg_match('#^/category/category/(?P<slug>[^/]++)(?:/(?P<page>[^/]++))?$#s', $pathinfo, $matches)) {
+            if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                $allow = array_merge($allow, array('GET', 'HEAD'));
+                goto not_category_show;
+            }
+
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'category_show')), array (  '_controller' => 'Ens\\ManonBundle\\Controller\\CategoryController::showAction',  'page' => 1,));
+        }
+        not_category_show:
+
         // ens_manon_homepage
         if (rtrim($pathinfo, '/') === '') {
             if (substr($pathinfo, -1) !== '/') {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Ens\ManonBundle\Bundle\DataFixtures\ORM;
+namespace Ens\ManonBundle\DataFixtures\ORM;
 
 use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\Common\DataFixtures\AbstractFixture;

@@ -47,7 +47,7 @@ class __TwigTemplate_0cd71235d71da782d650ee2f4c981f185751a76e66c8970a505f1bed14e
         <div class=\"content\">
             <h1><a href=\"";
         // line 21
-        echo $this->env->getExtension('routing')->getPath("job_index");
+        echo $this->env->getExtension('routing')->getPath("ens_manon_homepage");
         echo "\">
                     <img src=\"";
         // line 22
@@ -221,7 +221,7 @@ class __TwigTemplate_0cd71235d71da782d650ee2f4c981f185751a76e66c8970a505f1bed14e
 /* <div id="container">*/
 /*     <div id="header">*/
 /*         <div class="content">*/
-/*             <h1><a href="{{ path('job_index') }}">*/
+/*             <h1><a href="{{ path('ens_manon_homepage') }}">*/
 /*                     <img src="{{ asset('bundles/ensmanon/images/logo.jpg') }}" alt="Jobeet Job Board" />*/
 /*                 </a></h1>*/
 /* */
