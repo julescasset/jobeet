@@ -3,8 +3,8 @@ ens_manon_job:
     prefix:   /job
 
 ens_manon_category:
-    path:  /category/{slug}
-    defaults: { _controller: EnsManonBundle:Category:show }
+    resource: "@EnsManonBundle/Resources/config/routing/category.yml"
+    prefix:   /category
 
 ens_manon_homepage:
     path:     /
