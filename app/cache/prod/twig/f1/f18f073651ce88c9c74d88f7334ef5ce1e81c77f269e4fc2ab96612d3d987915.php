@@ -63,7 +63,9 @@ class __TwigTemplate_e783dc28967d318f54149a90a6b42b59295d1e125d97ddf9b35b96d9c1d
         }
         foreach ($context['_seq'] as $context["_key"] => $context["category"]) {
             // line 11
-            echo "            <div>
+            echo "            <div class=\"category_";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["category"], "slug", array()), "html", null, true);
+            echo "\">
                 <div class=\"category\">
                     <div class=\"feed\">
                         <a href=\"\">Feed</a>
@@ -125,7 +127,7 @@ class __TwigTemplate_e783dc28967d318f54149a90a6b42b59295d1e125d97ddf9b35b96d9c1d
 
     public function getDebugInfo()
     {
-        return array (  112 => 27,  97 => 25,  88 => 21,  85 => 20,  82 => 19,  80 => 18,  73 => 16,  66 => 11,  49 => 10,  46 => 9,  43 => 8,  37 => 5,  32 => 4,  29 => 3,  11 => 1,);
+        return array (  114 => 27,  99 => 25,  90 => 21,  87 => 20,  84 => 19,  82 => 18,  75 => 16,  66 => 11,  49 => 10,  46 => 9,  43 => 8,  37 => 5,  32 => 4,  29 => 3,  11 => 1,);
     }
 }
 /* {% extends 'EnsManonBundle::layout.html.twig' %}*/
@@ -138,7 +140,7 @@ class __TwigTemplate_e783dc28967d318f54149a90a6b42b59295d1e125d97ddf9b35b96d9c1d
 /* {% block content %}*/
 /*     <div id="jobs">*/
 /*         {% for category in categories %}*/
-/*             <div>*/
+/*             <div class="category_{{ category.slug }}">*/
 /*                 <div class="category">*/
 /*                     <div class="feed">*/
 /*                         <a href="">Feed</a>*/

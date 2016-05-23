@@ -12,7 +12,7 @@ class CategoryController extends Controller
 {
     public function showAction($slug, $page)
     {
-        $em = $this->getDoctrine()->getEntityManager();
+        $em = $this->getDoctrine()->getManager();
 
         $category = $em->getRepository('EnsManonBundle:Category')->findOneBySlug($slug);
 
