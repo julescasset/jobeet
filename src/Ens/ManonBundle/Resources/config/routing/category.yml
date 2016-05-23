@@ -1,4 +1,4 @@
 category_show:
-    path:     /category/{slug}/{page}
+    path:     /{slug}/{page}
     defaults: { _controller: "EnsManonBundle:Category:show", page: 1 }
     methods:  GET
