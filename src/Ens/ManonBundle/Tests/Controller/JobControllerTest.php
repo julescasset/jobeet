@@ -6,55 +6,78 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 class JobControllerTest extends WebTestCase
 {
-    public function testIndex()
-    {
-        $client = static::createClient();
-
-        // LES OFFRES EXPIRÉES NE SONT PAS LISTÉES
-        $crawler = $client->request('GET', '/');
-        $this->assertEquals('Ens\ManonBundle\Controller\JobController::indexAction',
-            $client->getRequest()->attributes->get('_controller'));
-        $this->assertTrue($crawler->filter('.jobs td.position:contains("Expired")')->count() == 0);
-
-        $kernel = static::createKernel();
-        $kernel->boot();
-
-        // LES OFFRES SONT TRIÉES PAR DATE
-        $this->assertTrue($crawler->filter('.category_programming tr')->first()->filter(sprintf('a[href*="/%d/"]',
-                $this->getMostRecentProgrammingJob()->getId()))->count() == 1);
-
-        // SEULEMENT N OFFRES SONT AFFICHÉES POUR UNE CATÉGORIE
-        $max_jobs_on_homepage = $kernel->getContainer()->getParameter('max_jobs_on_homepage');
-        $this->assertTrue($crawler->filter('.category_programming tr')->count() == $max_jobs_on_homepage);
-
-        // UNE CATÉGORIE A UN LIEN VERS LA PAGE CATÉGORIE SEULEMENT S'IL Y A TROP D'OFFRES
-        $this->assertTrue($crawler->filter('.category_design .more_jobs')->count() == 0);
-        $this->assertTrue($crawler->filter('.category_programming .more_jobs')->count() == 1);
-
-        // CHAQUE OFFRE SUR LA PAGE D'ACCUEIL EST CLIQUABLE
-        $job = $this->getMostRecentProgrammingJob();
-        $link = $crawler->selectLink('Web Developer')->first()->link();
-        $crawler = $client->click($link);
-        $this->assertEquals('Ens\ManonBundle\Controller\JobController::showAction', $client->getRequest()->attributes->get('_controller'));
-        $this->assertEquals($job->getCompanySlug(), $client->getRequest()->attributes->get('company'));
-        $this->assertEquals($job->getLocationSlug(), $client->getRequest()->attributes->get('location'));
-        $this->assertEquals($job->getPositionSlug(), $client->getRequest()->attributes->get('position'));
-        $this->assertEquals($job->getId(), $client->getRequest()->attributes->get('id'));
-    }
-
     public function getMostRecentProgrammingJob()
     {
         $kernel = static::createKernel();
         $kernel->boot();
         $em = $kernel->getContainer()->get('doctrine.orm.entity_manager');
 
-        // LES OFFRES SONT TRIÉES PAR DATE
         $query = $em->createQuery('SELECT j from EnsManonBundle:Job j LEFT JOIN j.category c WHERE c.slug = :slug AND
             j.expires_at > :date ORDER BY j.created_at DESC');
         $query->setParameter('slug', 'programming');
         $query->setParameter('date', date('Y-m-d H:i:s', time()));
         $query->setMaxResults(1);
+        return $query->getSingleResult();
+    }
+
+    public function getExpiredJob()
+    {
+        $kernel = static::createKernel();
+        $kernel->boot();
+        $em = $kernel->getContainer()->get('doctrine.orm.entity_manager');
+
+        $query = $em->createQuery('SELECT j from EnsManonBundle:Job j WHERE j.expires_at < :date');
+        $query->setParameter('date', date('Y-m-d H:i:s', time()));
+        $query->setMaxResults(1);
 
         return $query->getSingleResult();
+    }
+
+    public function testIndex()
+    {
+        // get the custom parameters from app config.yml
+        $kernel = static::createKernel();
+        $kernel->boot();
+        $max_jobs_on_homepage = $kernel->getContainer()->getParameter('max_jobs_on_homepage');
+        $max_jobs_on_category = $kernel->getContainer()->getParameter('max_jobs_on_category');
+
+        $client = static::createClient();
+
+        $crawler = $client->request('GET', '/');
+        $this->assertEquals('Ens\ManonBundle\Controller\JobController::indexAction',
+            $client->getRequest()->attributes->get('_controller'));
+
+        // expired jobs are not listed
+        $this->assertTrue($crawler->filter('.jobs td.position:contains("Expired")')->count() == 0);
+
+        // only $max_jobs_on_homepage jobs are listed for a category
+        $this->assertTrue($crawler->filter('.category_programming tr')->count() == 10);
+        $this->assertTrue($crawler->filter('.category_design .more_jobs')->count() == 0);
+        $this->assertTrue($crawler->filter('.category_programming .more_jobs')->count() == 1);
+
+        // jobs are sorted by date
+        $this->assertTrue($crawler->filter('.category_programming tr')->first()->filter(sprintf('a[href*="/%d/"]',
+                $this->getMostRecentProgrammingJob()->getId()))->count() == 1);
+
+        // each job on the homepage is clickable and give detailed information
+        $job = $this->getMostRecentProgrammingJob();
+        $link = $crawler->selectLink('Web Developer')->first()->link();
+        $crawler = $client->click($link);
+        $this->assertEquals('Ens\ManonBundle\Controller\JobController::showAction',
+            $client->getRequest()->attributes->get('_controller'));
+        $this->assertEquals($job->getCompanySlug(), $client->getRequest()->attributes->get('company'));
+        $this->assertEquals($job->getLocationSlug(), $client->getRequest()->attributes->get('location'));
+        $this->assertEquals($job->getPositionSlug(), $client->getRequest()->attributes->get('position'));
+        $this->assertEquals($job->getId(), $client->getRequest()->attributes->get('id'));
+
+        // a non-existent job forwards the user to a 404
+        $crawler = $client->request('GET', '/job/foo-inc/milano-italy/0/painter');
+        $this->assertTrue(404 === $client->getResponse()->getStatusCode());
+
+        // an expired job page forwards the user to a 404
+        $crawler = $client->request('GET', sprintf('/job/company-100/paris-france/2/web-developer',
+            $this->getExpiredJob()->getId()));
+        dump($client->getResponse()->getStatusCode());
+        $this->assertTrue(404 === $client->getResponse()->getStatusCode());
     }
 }
