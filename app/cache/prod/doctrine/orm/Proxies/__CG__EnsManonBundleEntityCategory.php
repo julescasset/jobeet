@@ -36,7 +36,7 @@ class Category extends \Ens\ManonBundle\Entity\Category implements \Doctrine\ORM
      *
      * @see \Doctrine\Common\Persistence\Proxy::__getLazyProperties
      */
-    public static $lazyPropertiesDefaults = array();
+    public static $lazyPropertiesDefaults = [];
 
 
 
@@ -64,10 +64,10 @@ class Category extends \Ens\ManonBundle\Entity\Category implements \Doctrine\ORM
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Category' . "\0" . 'id', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Category' . "\0" . 'name', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Category' . "\0" . 'jobs', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Category' . "\0" . 'category_affiliates', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Category' . "\0" . 'active_jobs', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Category' . "\0" . 'more_jobs', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Category' . "\0" . 'slug');
+            return ['__isInitialized__', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Category' . "\0" . 'id', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Category' . "\0" . 'name', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Category' . "\0" . 'jobs', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Category' . "\0" . 'category_affiliates', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Category' . "\0" . 'active_jobs', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Category' . "\0" . 'more_jobs', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Category' . "\0" . 'slug'];
         }
 
-        return array('__isInitialized__', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Category' . "\0" . 'id', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Category' . "\0" . 'name', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Category' . "\0" . 'jobs', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Category' . "\0" . 'category_affiliates', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Category' . "\0" . 'active_jobs', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Category' . "\0" . 'more_jobs', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Category' . "\0" . 'slug');
+        return ['__isInitialized__', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Category' . "\0" . 'id', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Category' . "\0" . 'name', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Category' . "\0" . 'jobs', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Category' . "\0" . 'category_affiliates', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Category' . "\0" . 'active_jobs', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Category' . "\0" . 'more_jobs', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Category' . "\0" . 'slug'];
     }
 
     /**
@@ -97,7 +97,7 @@ class Category extends \Ens\ManonBundle\Entity\Category implements \Doctrine\ORM
      */
     public function __clone()
     {
-        $this->__cloner__ && $this->__cloner__->__invoke($this, '__clone', array());
+        $this->__cloner__ && $this->__cloner__->__invoke($this, '__clone', []);
     }
 
     /**
@@ -105,7 +105,7 @@ class Category extends \Ens\ManonBundle\Entity\Category implements \Doctrine\ORM
      */
     public function __load()
     {
-        $this->__initializer__ && $this->__initializer__->__invoke($this, '__load', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, '__load', []);
     }
 
     /**
@@ -183,7 +183,7 @@ class Category extends \Ens\ManonBundle\Entity\Category implements \Doctrine\ORM
         }
 
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getId', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getId', []);
 
         return parent::getId();
     }
@@ -194,7 +194,7 @@ class Category extends \Ens\ManonBundle\Entity\Category implements \Doctrine\ORM
     public function setName($name)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setName', array($name));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setName', [$name]);
 
         return parent::setName($name);
     }
@@ -205,7 +205,7 @@ class Category extends \Ens\ManonBundle\Entity\Category implements \Doctrine\ORM
     public function getName()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getName', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getName', []);
 
         return parent::getName();
     }
@@ -216,7 +216,7 @@ class Category extends \Ens\ManonBundle\Entity\Category implements \Doctrine\ORM
     public function addJob(\Ens\ManonBundle\Entity\Job $jobs)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addJob', array($jobs));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addJob', [$jobs]);
 
         return parent::addJob($jobs);
     }
@@ -227,7 +227,7 @@ class Category extends \Ens\ManonBundle\Entity\Category implements \Doctrine\ORM
     public function removeJob(\Ens\ManonBundle\Entity\Job $jobs)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeJob', array($jobs));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeJob', [$jobs]);
 
         return parent::removeJob($jobs);
     }
@@ -238,7 +238,7 @@ class Category extends \Ens\ManonBundle\Entity\Category implements \Doctrine\ORM
     public function getJobs()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getJobs', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getJobs', []);
 
         return parent::getJobs();
     }
@@ -249,7 +249,7 @@ class Category extends \Ens\ManonBundle\Entity\Category implements \Doctrine\ORM
     public function addCategoryAffiliate(\Ens\ManonBundle\Entity\CategoryAffiliate $categoryAffiliates)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addCategoryAffiliate', array($categoryAffiliates));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addCategoryAffiliate', [$categoryAffiliates]);
 
         return parent::addCategoryAffiliate($categoryAffiliates);
     }
@@ -260,7 +260,7 @@ class Category extends \Ens\ManonBundle\Entity\Category implements \Doctrine\ORM
     public function removeCategoryAffiliate(\Ens\ManonBundle\Entity\CategoryAffiliate $categoryAffiliates)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeCategoryAffiliate', array($categoryAffiliates));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeCategoryAffiliate', [$categoryAffiliates]);
 
         return parent::removeCategoryAffiliate($categoryAffiliates);
     }
@@ -271,7 +271,7 @@ class Category extends \Ens\ManonBundle\Entity\Category implements \Doctrine\ORM
     public function getCategoryAffiliates()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getCategoryAffiliates', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getCategoryAffiliates', []);
 
         return parent::getCategoryAffiliates();
     }
@@ -282,7 +282,7 @@ class Category extends \Ens\ManonBundle\Entity\Category implements \Doctrine\ORM
     public function __toString()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, '__toString', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, '__toString', []);
 
         return parent::__toString();
     }
@@ -293,7 +293,7 @@ class Category extends \Ens\ManonBundle\Entity\Category implements \Doctrine\ORM
     public function setActiveJobs($jobs)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setActiveJobs', array($jobs));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setActiveJobs', [$jobs]);
 
         return parent::setActiveJobs($jobs);
     }
@@ -304,7 +304,7 @@ class Category extends \Ens\ManonBundle\Entity\Category implements \Doctrine\ORM
     public function getActiveJobs()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getActiveJobs', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getActiveJobs', []);
 
         return parent::getActiveJobs();
     }
@@ -315,7 +315,7 @@ class Category extends \Ens\ManonBundle\Entity\Category implements \Doctrine\ORM
     public function setMoreJobs($jobs)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setMoreJobs', array($jobs));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setMoreJobs', [$jobs]);
 
         return parent::setMoreJobs($jobs);
     }
@@ -326,7 +326,7 @@ class Category extends \Ens\ManonBundle\Entity\Category implements \Doctrine\ORM
     public function getMoreJobs()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getMoreJobs', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getMoreJobs', []);
 
         return parent::getMoreJobs();
     }
@@ -337,7 +337,7 @@ class Category extends \Ens\ManonBundle\Entity\Category implements \Doctrine\ORM
     public function setSlug($slug)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setSlug', array($slug));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setSlug', [$slug]);
 
         return parent::setSlug($slug);
     }
@@ -348,7 +348,7 @@ class Category extends \Ens\ManonBundle\Entity\Category implements \Doctrine\ORM
     public function getSlug()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getSlug', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getSlug', []);
 
         return parent::getSlug();
     }
@@ -359,7 +359,7 @@ class Category extends \Ens\ManonBundle\Entity\Category implements \Doctrine\ORM
     public function setSlugValue()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setSlugValue', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setSlugValue', []);
 
         return parent::setSlugValue();
     }

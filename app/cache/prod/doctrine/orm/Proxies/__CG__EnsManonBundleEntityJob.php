@@ -36,7 +36,7 @@ class Job extends \Ens\ManonBundle\Entity\Job implements \Doctrine\ORM\Proxy\Pro
      *
      * @see \Doctrine\Common\Persistence\Proxy::__getLazyProperties
      */
-    public static $lazyPropertiesDefaults = array();
+    public static $lazyPropertiesDefaults = [];
 
 
 
@@ -64,10 +64,10 @@ class Job extends \Ens\ManonBundle\Entity\Job implements \Doctrine\ORM\Proxy\Pro
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'id', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'type', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'company', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'logo', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'url', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'position', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'location', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'description', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'how_to_apply', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'token', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'is_public', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'is_activated', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'email', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'expires_at', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'created_at', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'updated_at', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'category');
+            return ['__isInitialized__', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'id', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'type', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'company', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'logo', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'url', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'position', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'location', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'description', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'how_to_apply', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'token', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'is_public', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'is_activated', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'email', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'expires_at', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'created_at', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'updated_at', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'category'];
         }
 
-        return array('__isInitialized__', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'id', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'type', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'company', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'logo', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'url', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'position', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'location', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'description', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'how_to_apply', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'token', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'is_public', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'is_activated', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'email', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'expires_at', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'created_at', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'updated_at', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'category');
+        return ['__isInitialized__', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'id', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'type', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'company', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'logo', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'url', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'position', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'location', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'description', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'how_to_apply', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'token', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'is_public', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'is_activated', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'email', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'expires_at', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'created_at', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'updated_at', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'category'];
     }
 
     /**
@@ -97,7 +97,7 @@ class Job extends \Ens\ManonBundle\Entity\Job implements \Doctrine\ORM\Proxy\Pro
      */
     public function __clone()
     {
-        $this->__cloner__ && $this->__cloner__->__invoke($this, '__clone', array());
+        $this->__cloner__ && $this->__cloner__->__invoke($this, '__clone', []);
     }
 
     /**
@@ -105,7 +105,7 @@ class Job extends \Ens\ManonBundle\Entity\Job implements \Doctrine\ORM\Proxy\Pro
      */
     public function __load()
     {
-        $this->__initializer__ && $this->__initializer__->__invoke($this, '__load', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, '__load', []);
     }
 
     /**
@@ -183,7 +183,7 @@ class Job extends \Ens\ManonBundle\Entity\Job implements \Doctrine\ORM\Proxy\Pro
         }
 
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getId', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getId', []);
 
         return parent::getId();
     }
@@ -194,7 +194,7 @@ class Job extends \Ens\ManonBundle\Entity\Job implements \Doctrine\ORM\Proxy\Pro
     public function setType($type)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setType', array($type));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setType', [$type]);
 
         return parent::setType($type);
     }
@@ -205,7 +205,7 @@ class Job extends \Ens\ManonBundle\Entity\Job implements \Doctrine\ORM\Proxy\Pro
     public function getType()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getType', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getType', []);
 
         return parent::getType();
     }
@@ -216,7 +216,7 @@ class Job extends \Ens\ManonBundle\Entity\Job implements \Doctrine\ORM\Proxy\Pro
     public function setCompany($company)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setCompany', array($company));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setCompany', [$company]);
 
         return parent::setCompany($company);
     }
@@ -227,7 +227,7 @@ class Job extends \Ens\ManonBundle\Entity\Job implements \Doctrine\ORM\Proxy\Pro
     public function getCompany()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getCompany', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getCompany', []);
 
         return parent::getCompany();
     }
@@ -238,7 +238,7 @@ class Job extends \Ens\ManonBundle\Entity\Job implements \Doctrine\ORM\Proxy\Pro
     public function setLogo($logo)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setLogo', array($logo));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setLogo', [$logo]);
 
         return parent::setLogo($logo);
     }
@@ -249,7 +249,7 @@ class Job extends \Ens\ManonBundle\Entity\Job implements \Doctrine\ORM\Proxy\Pro
     public function getLogo()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getLogo', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getLogo', []);
 
         return parent::getLogo();
     }
@@ -260,7 +260,7 @@ class Job extends \Ens\ManonBundle\Entity\Job implements \Doctrine\ORM\Proxy\Pro
     public function setUrl($url)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setUrl', array($url));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setUrl', [$url]);
 
         return parent::setUrl($url);
     }
@@ -271,7 +271,7 @@ class Job extends \Ens\ManonBundle\Entity\Job implements \Doctrine\ORM\Proxy\Pro
     public function getUrl()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getUrl', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getUrl', []);
 
         return parent::getUrl();
     }
@@ -282,7 +282,7 @@ class Job extends \Ens\ManonBundle\Entity\Job implements \Doctrine\ORM\Proxy\Pro
     public function setPosition($position)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setPosition', array($position));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setPosition', [$position]);
 
         return parent::setPosition($position);
     }
@@ -293,7 +293,7 @@ class Job extends \Ens\ManonBundle\Entity\Job implements \Doctrine\ORM\Proxy\Pro
     public function getPosition()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPosition', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPosition', []);
 
         return parent::getPosition();
     }
@@ -304,7 +304,7 @@ class Job extends \Ens\ManonBundle\Entity\Job implements \Doctrine\ORM\Proxy\Pro
     public function setLocation($location)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setLocation', array($location));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setLocation', [$location]);
 
         return parent::setLocation($location);
     }
@@ -315,7 +315,7 @@ class Job extends \Ens\ManonBundle\Entity\Job implements \Doctrine\ORM\Proxy\Pro
     public function getLocation()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getLocation', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getLocation', []);
 
         return parent::getLocation();
     }
@@ -326,7 +326,7 @@ class Job extends \Ens\ManonBundle\Entity\Job implements \Doctrine\ORM\Proxy\Pro
     public function setDescription($description)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setDescription', array($description));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setDescription', [$description]);
 
         return parent::setDescription($description);
     }
@@ -337,7 +337,7 @@ class Job extends \Ens\ManonBundle\Entity\Job implements \Doctrine\ORM\Proxy\Pro
     public function getDescription()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getDescription', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getDescription', []);
 
         return parent::getDescription();
     }
@@ -348,7 +348,7 @@ class Job extends \Ens\ManonBundle\Entity\Job implements \Doctrine\ORM\Proxy\Pro
     public function setHowToApply($howToApply)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setHowToApply', array($howToApply));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setHowToApply', [$howToApply]);
 
         return parent::setHowToApply($howToApply);
     }
@@ -359,7 +359,7 @@ class Job extends \Ens\ManonBundle\Entity\Job implements \Doctrine\ORM\Proxy\Pro
     public function getHowToApply()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getHowToApply', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getHowToApply', []);
 
         return parent::getHowToApply();
     }
@@ -370,7 +370,7 @@ class Job extends \Ens\ManonBundle\Entity\Job implements \Doctrine\ORM\Proxy\Pro
     public function setToken($token)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setToken', array($token));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setToken', [$token]);
 
         return parent::setToken($token);
     }
@@ -381,7 +381,7 @@ class Job extends \Ens\ManonBundle\Entity\Job implements \Doctrine\ORM\Proxy\Pro
     public function getToken()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getToken', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getToken', []);
 
         return parent::getToken();
     }
@@ -392,7 +392,7 @@ class Job extends \Ens\ManonBundle\Entity\Job implements \Doctrine\ORM\Proxy\Pro
     public function setIsPublic($isPublic)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setIsPublic', array($isPublic));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setIsPublic', [$isPublic]);
 
         return parent::setIsPublic($isPublic);
     }
@@ -403,7 +403,7 @@ class Job extends \Ens\ManonBundle\Entity\Job implements \Doctrine\ORM\Proxy\Pro
     public function getIsPublic()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getIsPublic', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getIsPublic', []);
 
         return parent::getIsPublic();
     }
@@ -414,7 +414,7 @@ class Job extends \Ens\ManonBundle\Entity\Job implements \Doctrine\ORM\Proxy\Pro
     public function setIsActivated($isActivated)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setIsActivated', array($isActivated));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setIsActivated', [$isActivated]);
 
         return parent::setIsActivated($isActivated);
     }
@@ -425,7 +425,7 @@ class Job extends \Ens\ManonBundle\Entity\Job implements \Doctrine\ORM\Proxy\Pro
     public function getIsActivated()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getIsActivated', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getIsActivated', []);
 
         return parent::getIsActivated();
     }
@@ -436,7 +436,7 @@ class Job extends \Ens\ManonBundle\Entity\Job implements \Doctrine\ORM\Proxy\Pro
     public function setEmail($email)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setEmail', array($email));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setEmail', [$email]);
 
         return parent::setEmail($email);
     }
@@ -447,7 +447,7 @@ class Job extends \Ens\ManonBundle\Entity\Job implements \Doctrine\ORM\Proxy\Pro
     public function getEmail()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getEmail', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getEmail', []);
 
         return parent::getEmail();
     }
@@ -458,7 +458,7 @@ class Job extends \Ens\ManonBundle\Entity\Job implements \Doctrine\ORM\Proxy\Pro
     public function setExpiresAt($expiresAt)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setExpiresAt', array($expiresAt));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setExpiresAt', [$expiresAt]);
 
         return parent::setExpiresAt($expiresAt);
     }
@@ -469,7 +469,7 @@ class Job extends \Ens\ManonBundle\Entity\Job implements \Doctrine\ORM\Proxy\Pro
     public function getExpiresAt()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getExpiresAt', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getExpiresAt', []);
 
         return parent::getExpiresAt();
     }
@@ -480,7 +480,7 @@ class Job extends \Ens\ManonBundle\Entity\Job implements \Doctrine\ORM\Proxy\Pro
     public function setCreatedAt($createdAt)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setCreatedAt', array($createdAt));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setCreatedAt', [$createdAt]);
 
         return parent::setCreatedAt($createdAt);
     }
@@ -491,7 +491,7 @@ class Job extends \Ens\ManonBundle\Entity\Job implements \Doctrine\ORM\Proxy\Pro
     public function getCreatedAt()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getCreatedAt', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getCreatedAt', []);
 
         return parent::getCreatedAt();
     }
@@ -502,7 +502,7 @@ class Job extends \Ens\ManonBundle\Entity\Job implements \Doctrine\ORM\Proxy\Pro
     public function setUpdatedAt($updatedAt)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setUpdatedAt', array($updatedAt));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setUpdatedAt', [$updatedAt]);
 
         return parent::setUpdatedAt($updatedAt);
     }
@@ -513,7 +513,7 @@ class Job extends \Ens\ManonBundle\Entity\Job implements \Doctrine\ORM\Proxy\Pro
     public function getUpdatedAt()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getUpdatedAt', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getUpdatedAt', []);
 
         return parent::getUpdatedAt();
     }
@@ -524,7 +524,7 @@ class Job extends \Ens\ManonBundle\Entity\Job implements \Doctrine\ORM\Proxy\Pro
     public function setCategory(\Ens\ManonBundle\Entity\Category $category = NULL)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setCategory', array($category));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setCategory', [$category]);
 
         return parent::setCategory($category);
     }
@@ -535,7 +535,7 @@ class Job extends \Ens\ManonBundle\Entity\Job implements \Doctrine\ORM\Proxy\Pro
     public function getCategory()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getCategory', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getCategory', []);
 
         return parent::getCategory();
     }
@@ -546,7 +546,7 @@ class Job extends \Ens\ManonBundle\Entity\Job implements \Doctrine\ORM\Proxy\Pro
     public function setCreatedAtValue()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setCreatedAtValue', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setCreatedAtValue', []);
 
         return parent::setCreatedAtValue();
     }
@@ -557,7 +557,7 @@ class Job extends \Ens\ManonBundle\Entity\Job implements \Doctrine\ORM\Proxy\Pro
     public function setUpdatedAtValue()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setUpdatedAtValue', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setUpdatedAtValue', []);
 
         return parent::setUpdatedAtValue();
     }
@@ -568,7 +568,7 @@ class Job extends \Ens\ManonBundle\Entity\Job implements \Doctrine\ORM\Proxy\Pro
     public function getCompanySlug()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getCompanySlug', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getCompanySlug', []);
 
         return parent::getCompanySlug();
     }
@@ -579,7 +579,7 @@ class Job extends \Ens\ManonBundle\Entity\Job implements \Doctrine\ORM\Proxy\Pro
     public function getPositionSlug()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPositionSlug', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPositionSlug', []);
 
         return parent::getPositionSlug();
     }
@@ -590,7 +590,7 @@ class Job extends \Ens\ManonBundle\Entity\Job implements \Doctrine\ORM\Proxy\Pro
     public function getLocationSlug()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getLocationSlug', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getLocationSlug', []);
 
         return parent::getLocationSlug();
     }
@@ -601,7 +601,7 @@ class Job extends \Ens\ManonBundle\Entity\Job implements \Doctrine\ORM\Proxy\Pro
     public function setExpiresAtValue()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setExpiresAtValue', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setExpiresAtValue', []);
 
         return parent::setExpiresAtValue();
     }

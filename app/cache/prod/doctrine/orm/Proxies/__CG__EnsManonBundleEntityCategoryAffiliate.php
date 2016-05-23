@@ -36,7 +36,7 @@ class CategoryAffiliate extends \Ens\ManonBundle\Entity\CategoryAffiliate implem
      *
      * @see \Doctrine\Common\Persistence\Proxy::__getLazyProperties
      */
-    public static $lazyPropertiesDefaults = array();
+    public static $lazyPropertiesDefaults = [];
 
 
 
@@ -64,10 +64,10 @@ class CategoryAffiliate extends \Ens\ManonBundle\Entity\CategoryAffiliate implem
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', '' . "\0" . 'Ens\\ManonBundle\\Entity\\CategoryAffiliate' . "\0" . 'id', '' . "\0" . 'Ens\\ManonBundle\\Entity\\CategoryAffiliate' . "\0" . 'category', '' . "\0" . 'Ens\\ManonBundle\\Entity\\CategoryAffiliate' . "\0" . 'affiliate');
+            return ['__isInitialized__', '' . "\0" . 'Ens\\ManonBundle\\Entity\\CategoryAffiliate' . "\0" . 'id', '' . "\0" . 'Ens\\ManonBundle\\Entity\\CategoryAffiliate' . "\0" . 'category', '' . "\0" . 'Ens\\ManonBundle\\Entity\\CategoryAffiliate' . "\0" . 'affiliate'];
         }
 
-        return array('__isInitialized__', '' . "\0" . 'Ens\\ManonBundle\\Entity\\CategoryAffiliate' . "\0" . 'id', '' . "\0" . 'Ens\\ManonBundle\\Entity\\CategoryAffiliate' . "\0" . 'category', '' . "\0" . 'Ens\\ManonBundle\\Entity\\CategoryAffiliate' . "\0" . 'affiliate');
+        return ['__isInitialized__', '' . "\0" . 'Ens\\ManonBundle\\Entity\\CategoryAffiliate' . "\0" . 'id', '' . "\0" . 'Ens\\ManonBundle\\Entity\\CategoryAffiliate' . "\0" . 'category', '' . "\0" . 'Ens\\ManonBundle\\Entity\\CategoryAffiliate' . "\0" . 'affiliate'];
     }
 
     /**
@@ -97,7 +97,7 @@ class CategoryAffiliate extends \Ens\ManonBundle\Entity\CategoryAffiliate implem
      */
     public function __clone()
     {
-        $this->__cloner__ && $this->__cloner__->__invoke($this, '__clone', array());
+        $this->__cloner__ && $this->__cloner__->__invoke($this, '__clone', []);
     }
 
     /**
@@ -105,7 +105,7 @@ class CategoryAffiliate extends \Ens\ManonBundle\Entity\CategoryAffiliate implem
      */
     public function __load()
     {
-        $this->__initializer__ && $this->__initializer__->__invoke($this, '__load', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, '__load', []);
     }
 
     /**
@@ -183,7 +183,7 @@ class CategoryAffiliate extends \Ens\ManonBundle\Entity\CategoryAffiliate implem
         }
 
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getId', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getId', []);
 
         return parent::getId();
     }
@@ -194,7 +194,7 @@ class CategoryAffiliate extends \Ens\ManonBundle\Entity\CategoryAffiliate implem
     public function setCategory(\Ens\ManonBundle\Entity\Category $category = NULL)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setCategory', array($category));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setCategory', [$category]);
 
         return parent::setCategory($category);
     }
@@ -205,7 +205,7 @@ class CategoryAffiliate extends \Ens\ManonBundle\Entity\CategoryAffiliate implem
     public function getCategory()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getCategory', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getCategory', []);
 
         return parent::getCategory();
     }
@@ -216,7 +216,7 @@ class CategoryAffiliate extends \Ens\ManonBundle\Entity\CategoryAffiliate implem
     public function setAffiliate(\Ens\ManonBundle\Entity\Affiliate $affiliate = NULL)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setAffiliate', array($affiliate));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setAffiliate', [$affiliate]);
 
         return parent::setAffiliate($affiliate);
     }
@@ -227,7 +227,7 @@ class CategoryAffiliate extends \Ens\ManonBundle\Entity\CategoryAffiliate implem
     public function getAffiliate()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getAffiliate', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getAffiliate', []);
 
         return parent::getAffiliate();
     }

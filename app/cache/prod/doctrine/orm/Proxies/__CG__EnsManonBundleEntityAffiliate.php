@@ -36,7 +36,7 @@ class Affiliate extends \Ens\ManonBundle\Entity\Affiliate implements \Doctrine\O
      *
      * @see \Doctrine\Common\Persistence\Proxy::__getLazyProperties
      */
-    public static $lazyPropertiesDefaults = array();
+    public static $lazyPropertiesDefaults = [];
 
 
 
@@ -64,10 +64,10 @@ class Affiliate extends \Ens\ManonBundle\Entity\Affiliate implements \Doctrine\O
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Affiliate' . "\0" . 'id', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Affiliate' . "\0" . 'url', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Affiliate' . "\0" . 'email', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Affiliate' . "\0" . 'token', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Affiliate' . "\0" . 'created_at', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Affiliate' . "\0" . 'category_affiliates');
+            return ['__isInitialized__', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Affiliate' . "\0" . 'id', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Affiliate' . "\0" . 'url', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Affiliate' . "\0" . 'email', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Affiliate' . "\0" . 'token', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Affiliate' . "\0" . 'created_at', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Affiliate' . "\0" . 'category_affiliates'];
         }
 
-        return array('__isInitialized__', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Affiliate' . "\0" . 'id', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Affiliate' . "\0" . 'url', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Affiliate' . "\0" . 'email', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Affiliate' . "\0" . 'token', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Affiliate' . "\0" . 'created_at', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Affiliate' . "\0" . 'category_affiliates');
+        return ['__isInitialized__', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Affiliate' . "\0" . 'id', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Affiliate' . "\0" . 'url', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Affiliate' . "\0" . 'email', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Affiliate' . "\0" . 'token', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Affiliate' . "\0" . 'created_at', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Affiliate' . "\0" . 'category_affiliates'];
     }
 
     /**
@@ -97,7 +97,7 @@ class Affiliate extends \Ens\ManonBundle\Entity\Affiliate implements \Doctrine\O
      */
     public function __clone()
     {
-        $this->__cloner__ && $this->__cloner__->__invoke($this, '__clone', array());
+        $this->__cloner__ && $this->__cloner__->__invoke($this, '__clone', []);
     }
 
     /**
@@ -105,7 +105,7 @@ class Affiliate extends \Ens\ManonBundle\Entity\Affiliate implements \Doctrine\O
      */
     public function __load()
     {
-        $this->__initializer__ && $this->__initializer__->__invoke($this, '__load', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, '__load', []);
     }
 
     /**
@@ -183,7 +183,7 @@ class Affiliate extends \Ens\ManonBundle\Entity\Affiliate implements \Doctrine\O
         }
 
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getId', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getId', []);
 
         return parent::getId();
     }
@@ -194,7 +194,7 @@ class Affiliate extends \Ens\ManonBundle\Entity\Affiliate implements \Doctrine\O
     public function setUrl($url)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setUrl', array($url));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setUrl', [$url]);
 
         return parent::setUrl($url);
     }
@@ -205,7 +205,7 @@ class Affiliate extends \Ens\ManonBundle\Entity\Affiliate implements \Doctrine\O
     public function getUrl()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getUrl', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getUrl', []);
 
         return parent::getUrl();
     }
@@ -216,7 +216,7 @@ class Affiliate extends \Ens\ManonBundle\Entity\Affiliate implements \Doctrine\O
     public function setEmail($email)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setEmail', array($email));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setEmail', [$email]);
 
         return parent::setEmail($email);
     }
@@ -227,7 +227,7 @@ class Affiliate extends \Ens\ManonBundle\Entity\Affiliate implements \Doctrine\O
     public function getEmail()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getEmail', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getEmail', []);
 
         return parent::getEmail();
     }
@@ -238,7 +238,7 @@ class Affiliate extends \Ens\ManonBundle\Entity\Affiliate implements \Doctrine\O
     public function setToken($token)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setToken', array($token));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setToken', [$token]);
 
         return parent::setToken($token);
     }
@@ -249,7 +249,7 @@ class Affiliate extends \Ens\ManonBundle\Entity\Affiliate implements \Doctrine\O
     public function getToken()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getToken', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getToken', []);
 
         return parent::getToken();
     }
@@ -260,7 +260,7 @@ class Affiliate extends \Ens\ManonBundle\Entity\Affiliate implements \Doctrine\O
     public function setCreatedAt($createdAt)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setCreatedAt', array($createdAt));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setCreatedAt', [$createdAt]);
 
         return parent::setCreatedAt($createdAt);
     }
@@ -271,7 +271,7 @@ class Affiliate extends \Ens\ManonBundle\Entity\Affiliate implements \Doctrine\O
     public function getCreatedAt()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getCreatedAt', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getCreatedAt', []);
 
         return parent::getCreatedAt();
     }
@@ -282,7 +282,7 @@ class Affiliate extends \Ens\ManonBundle\Entity\Affiliate implements \Doctrine\O
     public function addCategoryAffiliate(\Ens\ManonBundle\Entity\CategoryAffiliate $categoryAffiliates)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addCategoryAffiliate', array($categoryAffiliates));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addCategoryAffiliate', [$categoryAffiliates]);
 
         return parent::addCategoryAffiliate($categoryAffiliates);
     }
@@ -293,7 +293,7 @@ class Affiliate extends \Ens\ManonBundle\Entity\Affiliate implements \Doctrine\O
     public function removeCategoryAffiliate(\Ens\ManonBundle\Entity\CategoryAffiliate $categoryAffiliates)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeCategoryAffiliate', array($categoryAffiliates));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeCategoryAffiliate', [$categoryAffiliates]);
 
         return parent::removeCategoryAffiliate($categoryAffiliates);
     }
@@ -304,7 +304,7 @@ class Affiliate extends \Ens\ManonBundle\Entity\Affiliate implements \Doctrine\O
     public function getCategoryAffiliates()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getCategoryAffiliates', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getCategoryAffiliates', []);
 
         return parent::getCategoryAffiliates();
     }
@@ -315,7 +315,7 @@ class Affiliate extends \Ens\ManonBundle\Entity\Affiliate implements \Doctrine\O
     public function setCreatedAtValue()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setCreatedAtValue', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setCreatedAtValue', []);
 
         return parent::setCreatedAtValue();
     }
