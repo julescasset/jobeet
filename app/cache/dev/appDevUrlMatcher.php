@@ -143,21 +143,37 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             }
             not_job_new:
 
-            // job_edit
-            if (preg_match('#^/job/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
-                if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
-                    $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
-                    goto not_job_edit;
+            // job_create
+            if ($pathinfo === '/job/create') {
+                if ($this->context->getMethod() != 'POST') {
+                    $allow[] = 'POST';
+                    goto not_job_create;
                 }
 
+                return array (  '_controller' => 'Ens\\ManonBundle\\Controller\\JobController::createAction',  '_route' => 'job_create',);
+            }
+            not_job_create:
+
+            // job_edit
+            if (preg_match('#^/job/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'job_edit')), array (  '_controller' => 'Ens\\ManonBundle\\Controller\\JobController::editAction',));
             }
-            not_job_edit:
+
+            // job_update
+            if (preg_match('#^/job/(?P<id>[^/]++)/update$#s', $pathinfo, $matches)) {
+                if ($this->context->getMethod() != 'POST') {
+                    $allow[] = 'POST';
+                    goto not_job_update;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'job_update')), array (  '_controller' => 'Ens\\ManonBundle\\Controller\\JobController::updateAction',));
+            }
+            not_job_update:
 
             // job_delete
             if (preg_match('#^/job/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
-                if ($this->context->getMethod() != 'DELETE') {
-                    $allow[] = 'DELETE';
+                if ($this->context->getMethod() != 'POST') {
+                    $allow[] = 'POST';
                     goto not_job_delete;
                 }
 

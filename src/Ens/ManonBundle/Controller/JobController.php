@@ -103,6 +103,27 @@ class JobController extends Controller
     }
 
     /**
+     * Updates a Job entity.
+     *
+     */
+    public function updateAction(Job $job)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $entity = $em->getRepository('EnsManonBundle:Job')->find($job->getId());
+
+        if (!$entity) {
+            throw $this->createNotFoundException(
+                'No job found for id '. $job->getId()
+            );
+        }
+
+        //$entity->setName('New product name!');
+        $em->flush();
+
+        return $this->redirectToRoute('job_index');
+    }
+
+    /**
      * Deletes a Job entity.
      *
      */
@@ -134,5 +155,31 @@ class JobController extends Controller
             ->setMethod('DELETE')
             ->getForm()
         ;
+    }
+
+    public function createAction(Request $request)
+    {
+        $job = new Job();
+        $form = $this->createForm('Ens\ManonBundle\Form\JobType', $job);
+        $form->handleRequest($request);
+
+        if ($form->isValid()) {
+            $em = $this->getDoctrine()->getEntityManager();
+
+            $em->persist($job);
+            $em->flush();
+
+            return $this->redirect($this->generateUrl('job_show', array(
+                'company' => $job->getCompanySlug(),
+                'location' => $job->getLocationSlug(),
+                'id' => $job->getId(),
+                'position' => $job->getPositionSlug()
+            )));
+        }
+
+        return $this->render('job/new.html.twig', array(
+            'entity' => $job,
+            'form'   => $form->createView()
+        ));
     }
 }

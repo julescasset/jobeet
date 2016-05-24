@@ -15,12 +15,21 @@ job_new:
     defaults: { _controller: "EnsManonBundle:Job:new" }
     methods:  [GET, POST]
 
+job_create:
+    path:     /create
+    defaults: { _controller: "EnsManonBundle:Job:create" }
+    methods:  POST
+
 job_edit:
     path:     /{id}/edit
     defaults: { _controller: "EnsManonBundle:Job:edit" }
-    methods:  [GET, POST]
+
+job_update:
+    path:     /{id}/update
+    defaults: { _controller: "EnsManonBundle:Job:update" }
+    methods:  POST
 
 job_delete:
     path:     /{id}/delete
     defaults: { _controller: "EnsManonBundle:Job:delete" }
-    methods:  DELETE
+    methods:  POST
