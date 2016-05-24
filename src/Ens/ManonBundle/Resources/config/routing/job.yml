@@ -10,17 +10,37 @@ job_show:
         id:  \d+
     methods:  GET
 
+job_preview:
+    path:  /{company}/{location}/{token}/{position}
+    defaults: { _controller: "EnsManonBundle:Job:preview" }
+    requirements:
+        token:  \w+
+
 job_new:
     path:     /new
     defaults: { _controller: "EnsManonBundle:Job:new" }
     methods:  [GET, POST]
 
+job_create:
+    path:     /create
+    defaults: { _controller: "EnsManonBundle:Job:create" }
+    methods:  POST
+
 job_edit:
-    path:     /{id}/edit
+    path:  /{token}/edit
     defaults: { _controller: "EnsManonBundle:Job:edit" }
-    methods:  [GET, POST]
+
+job_update:
+    path:  /{token}/update
+    defaults: { _controller: "EnsManonBundle:Job:update" }
+    methods:  POST
 
 job_delete:
-    path:     /{id}/delete
+    path:  /{token}/delete
     defaults: { _controller: "EnsManonBundle:Job:delete" }
-    methods:  DELETE
+    methods:  POST
+
+job_publish:
+    path:  /{token}/publish
+    defaults: { _controller: "EnsManonBundle:Job:publish" }
+    methods:  POST

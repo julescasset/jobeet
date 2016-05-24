@@ -1,6 +1,6 @@
 <?php
 
-/* job/edit.html.twig */
+/* job/edit.html.twig. */
 class __TwigTemplate_cd94dfbc2e32e10f5d7475df088cc0691355a287fc008bc80c5e1885b7ba607e extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -8,8 +8,10 @@ class __TwigTemplate_cd94dfbc2e32e10f5d7475df088cc0691355a287fc008bc80c5e1885b7b
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("EnsManonBundle::layout.html.twig", "job/edit.html.twig", 1);
+        $this->parent = $this->loadTemplate("EnsManonBundle::layout.html.twig", "job/edit.html.twig.", 1);
         $this->blocks = array(
+            'field_errors' => array($this, 'block_field_errors'),
+            'stylesheets' => array($this, 'block_stylesheets'),
             'content' => array($this, 'block_content'),
         );
     }
@@ -21,66 +23,295 @@ class __TwigTemplate_cd94dfbc2e32e10f5d7475df088cc0691355a287fc008bc80c5e1885b7b
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_280e3a5877241844759a952bcd4298903f5d72257db54ae92da28c4028c18e96 = $this->env->getExtension("native_profiler");
-        $__internal_280e3a5877241844759a952bcd4298903f5d72257db54ae92da28c4028c18e96->enter($__internal_280e3a5877241844759a952bcd4298903f5d72257db54ae92da28c4028c18e96_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "job/edit.html.twig"));
+        $__internal_f8eb03daba8d09576e95a500152dcd067749d304c6b5a017a4b1395674f95eb8 = $this->env->getExtension("native_profiler");
+        $__internal_f8eb03daba8d09576e95a500152dcd067749d304c6b5a017a4b1395674f95eb8->enter($__internal_f8eb03daba8d09576e95a500152dcd067749d304c6b5a017a4b1395674f95eb8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "job/edit.html.twig."));
 
+        // line 3
+        $this->env->getExtension('form')->renderer->setTheme((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), array(0 => $this));
+        // line 1
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_280e3a5877241844759a952bcd4298903f5d72257db54ae92da28c4028c18e96->leave($__internal_280e3a5877241844759a952bcd4298903f5d72257db54ae92da28c4028c18e96_prof);
+        $__internal_f8eb03daba8d09576e95a500152dcd067749d304c6b5a017a4b1395674f95eb8->leave($__internal_f8eb03daba8d09576e95a500152dcd067749d304c6b5a017a4b1395674f95eb8_prof);
 
     }
 
-    // line 3
-    public function block_content($context, array $blocks = array())
+    // line 5
+    public function block_field_errors($context, array $blocks = array())
     {
-        $__internal_d263c5bfaf93cef840fdd532d7de0d498e7b2480a526e13759bc9c5c0406f74e = $this->env->getExtension("native_profiler");
-        $__internal_d263c5bfaf93cef840fdd532d7de0d498e7b2480a526e13759bc9c5c0406f74e->enter($__internal_d263c5bfaf93cef840fdd532d7de0d498e7b2480a526e13759bc9c5c0406f74e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_4d8fd343762f1e8567f2b30c70184ee878a96b6a41d4b62660eb56cc61ad57df = $this->env->getExtension("native_profiler");
+        $__internal_4d8fd343762f1e8567f2b30c70184ee878a96b6a41d4b62660eb56cc61ad57df->enter($__internal_4d8fd343762f1e8567f2b30c70184ee878a96b6a41d4b62660eb56cc61ad57df_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "field_errors"));
 
-        // line 4
-        echo "    <h1>Job edit</h1>
-
-    ";
         // line 6
-        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), 'form_start');
-        echo "
-        ";
+        echo "    ";
+        ob_start();
         // line 7
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), 'widget');
-        echo "
-        <input type=\"submit\" value=\"Edit\" />
-    ";
-        // line 9
-        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), 'form_end');
-        echo "
+        echo "        ";
+        if ((twig_length_filter($this->env, (isset($context["errors"]) ? $context["errors"] : $this->getContext($context, "errors"))) > 0)) {
+            // line 8
+            echo "            <ul>
+                ";
+            // line 9
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable((isset($context["errors"]) ? $context["errors"] : $this->getContext($context, "errors")));
+            foreach ($context['_seq'] as $context["_key"] => $context["error"]) {
+                // line 10
+                echo "                    <li>";
+                echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans($this->getAttribute($context["error"], "messageTemplate", array()), $this->getAttribute($context["error"], "messageParameters", array()), "validators"), "html", null, true);
+                echo "</li>
+                ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['error'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 12
+            echo "            </ul>
+        ";
+        }
+        // line 14
+        echo "    ";
+        echo trim(preg_replace('/>\s+</', '><', ob_get_clean()));
+        
+        $__internal_4d8fd343762f1e8567f2b30c70184ee878a96b6a41d4b62660eb56cc61ad57df->leave($__internal_4d8fd343762f1e8567f2b30c70184ee878a96b6a41d4b62660eb56cc61ad57df_prof);
 
-    <ul>
-        <li>
-            <a href=\"";
-        // line 13
-        echo $this->env->getExtension('routing')->getPath("job_index");
-        echo "\">Back to the list</a>
-        </li>
-        <li>
-            ";
-        // line 16
-        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["delete_form"]) ? $context["delete_form"] : $this->getContext($context, "delete_form")), 'form_start');
-        echo "
-                <input type=\"submit\" value=\"Delete\">
-            ";
+    }
+
+    // line 17
+    public function block_stylesheets($context, array $blocks = array())
+    {
+        $__internal_5c782d42cd4a18c7a8e8967c38a7c9e74dce9f506e7a68d54ac488c4f612e029 = $this->env->getExtension("native_profiler");
+        $__internal_5c782d42cd4a18c7a8e8967c38a7c9e74dce9f506e7a68d54ac488c4f612e029->enter($__internal_5c782d42cd4a18c7a8e8967c38a7c9e74dce9f506e7a68d54ac488c4f612e029_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+
         // line 18
-        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["delete_form"]) ? $context["delete_form"] : $this->getContext($context, "delete_form")), 'form_end');
+        echo "    ";
+        $this->displayParentBlock("stylesheets", $context, $blocks);
         echo "
-        </li>
-    </ul>
+    <link rel=\"stylesheet\" href=\"";
+        // line 19
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/ensmanon/css/job.css"), "html", null, true);
+        echo "\" type=\"text/css\" media=\"all\" />
 ";
         
-        $__internal_d263c5bfaf93cef840fdd532d7de0d498e7b2480a526e13759bc9c5c0406f74e->leave($__internal_d263c5bfaf93cef840fdd532d7de0d498e7b2480a526e13759bc9c5c0406f74e_prof);
+        $__internal_5c782d42cd4a18c7a8e8967c38a7c9e74dce9f506e7a68d54ac488c4f612e029->leave($__internal_5c782d42cd4a18c7a8e8967c38a7c9e74dce9f506e7a68d54ac488c4f612e029_prof);
+
+    }
+
+    // line 22
+    public function block_content($context, array $blocks = array())
+    {
+        $__internal_c917ab2dd7304326ffea64df230f515e6dfc8ac2c5381cd7b166bf8c7e83f249 = $this->env->getExtension("native_profiler");
+        $__internal_c917ab2dd7304326ffea64df230f515e6dfc8ac2c5381cd7b166bf8c7e83f249->enter($__internal_c917ab2dd7304326ffea64df230f515e6dfc8ac2c5381cd7b166bf8c7e83f249_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+
+        // line 23
+        echo "    <h1>Job edit</h1>
+    <form action=\"";
+        // line 24
+        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("job_update", array("token" => $this->getAttribute((isset($context["job"]) ? $context["job"] : $this->getContext($context, "job")), "token", array()))), "html", null, true);
+        echo "\" method=\"post\" ";
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), 'enctype');
+        echo ">
+        <table id=\"job_form\">
+            <tfoot>
+            <tr>
+                <td colspan=\"2\">
+                    <input type=\"submit\" value=\"Preview your job\" />
+                </td>
+            </tr>
+            </tfoot>
+            <tbody>
+            <tr>
+                <th>";
+        // line 35
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), "category", array()), 'label');
+        echo "</th>
+                <td>
+                    ";
+        // line 37
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), "category", array()), 'errors');
+        echo "
+                    ";
+        // line 38
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), "category", array()), 'widget');
+        echo "
+                </td>
+            </tr>
+            <tr>
+                <th>";
+        // line 42
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), "type", array()), 'label');
+        echo "</th>
+                <td>
+                    ";
+        // line 44
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), "type", array()), 'errors');
+        echo "
+                    ";
+        // line 45
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), "type", array()), 'widget');
+        echo "
+                </td>
+            </tr>
+            <tr>
+                <th>";
+        // line 49
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), "company", array()), 'label');
+        echo "</th>
+                <td>
+                    ";
+        // line 51
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), "company", array()), 'errors');
+        echo "
+                    ";
+        // line 52
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), "company", array()), 'widget');
+        echo "
+                </td>
+            </tr>
+            <tr>
+                <th>";
+        // line 56
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), "file", array()), 'label');
+        echo "</th>
+                <td>
+                    ";
+        // line 58
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), "file", array()), 'errors');
+        echo "
+                    ";
+        // line 59
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), "file", array()), 'widget');
+        echo "
+                </td>
+            </tr>
+            <tr>
+                <th>";
+        // line 63
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), "url", array()), 'label');
+        echo "</th>
+                <td>
+                    ";
+        // line 65
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), "url", array()), 'errors');
+        echo "
+                    ";
+        // line 66
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), "url", array()), 'widget');
+        echo "
+                </td>
+            </tr>
+            <tr>
+                <th>";
+        // line 70
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), "position", array()), 'label');
+        echo "</th>
+                <td>
+                    ";
+        // line 72
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), "position", array()), 'errors');
+        echo "
+                    ";
+        // line 73
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), "position", array()), 'widget');
+        echo "
+                </td>
+            </tr>
+            <tr>
+                <th>";
+        // line 77
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), "location", array()), 'label');
+        echo "</th>
+                <td>
+                    ";
+        // line 79
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), "location", array()), 'errors');
+        echo "
+                    ";
+        // line 80
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), "location", array()), 'widget');
+        echo "
+                </td>
+            </tr>
+            <tr>
+                <th>";
+        // line 84
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), "description", array()), 'label');
+        echo "</th>
+                <td>
+                    ";
+        // line 86
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), "description", array()), 'errors');
+        echo "
+                    ";
+        // line 87
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), "description", array()), 'widget');
+        echo "
+                </td>
+            </tr>
+            <tr>
+                <th>";
+        // line 91
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), "how_to_apply", array()), 'label');
+        echo "</th>
+                <td>
+                    ";
+        // line 93
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), "how_to_apply", array()), 'errors');
+        echo "
+                    ";
+        // line 94
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), "how_to_apply", array()), 'widget');
+        echo "
+                </td>
+            </tr>
+            <tr>
+                <th>";
+        // line 98
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), "is_public", array()), 'label');
+        echo "</th>
+                <td>
+                    ";
+        // line 100
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), "is_public", array()), 'errors');
+        echo "
+                    ";
+        // line 101
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), "is_public", array()), 'widget');
+        echo "
+                    <br /> Whether the job can also be published on affiliate websites or not.
+                </td>
+            </tr>
+            <tr>
+                <th>";
+        // line 106
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), "email", array()), 'label');
+        echo "</th>
+                <td>
+                    ";
+        // line 108
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), "email", array()), 'errors');
+        echo "
+                    ";
+        // line 109
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), "email", array()), 'widget');
+        echo "
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        ";
+        // line 115
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), 'rest');
+        echo "
+    </form>
+";
+        
+        $__internal_c917ab2dd7304326ffea64df230f515e6dfc8ac2c5381cd7b166bf8c7e83f249->leave($__internal_c917ab2dd7304326ffea64df230f515e6dfc8ac2c5381cd7b166bf8c7e83f249_prof);
 
     }
 
     public function getTemplateName()
     {
-        return "job/edit.html.twig";
+        return "job/edit.html.twig.";
     }
 
     public function isTraitable()
@@ -90,27 +321,123 @@ class __TwigTemplate_cd94dfbc2e32e10f5d7475df088cc0691355a287fc008bc80c5e1885b7b
 
     public function getDebugInfo()
     {
-        return array (  71 => 18,  66 => 16,  60 => 13,  53 => 9,  48 => 7,  44 => 6,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  303 => 115,  294 => 109,  290 => 108,  285 => 106,  277 => 101,  273 => 100,  268 => 98,  261 => 94,  257 => 93,  252 => 91,  245 => 87,  241 => 86,  236 => 84,  229 => 80,  225 => 79,  220 => 77,  213 => 73,  209 => 72,  204 => 70,  197 => 66,  193 => 65,  188 => 63,  181 => 59,  177 => 58,  172 => 56,  165 => 52,  161 => 51,  156 => 49,  149 => 45,  145 => 44,  140 => 42,  133 => 38,  129 => 37,  124 => 35,  108 => 24,  105 => 23,  99 => 22,  90 => 19,  85 => 18,  79 => 17,  71 => 14,  67 => 12,  58 => 10,  54 => 9,  51 => 8,  48 => 7,  45 => 6,  39 => 5,  32 => 1,  30 => 3,  11 => 1,);
     }
 }
 /* {% extends 'EnsManonBundle::layout.html.twig' %}*/
 /* */
+/* {% form_theme edit_form _self %}*/
+/* */
+/* {% block field_errors %}*/
+/*     {% spaceless %}*/
+/*         {% if errors|length > 0 %}*/
+/*             <ul>*/
+/*                 {% for error in errors %}*/
+/*                     <li>{{ error.messageTemplate|trans(error.messageParameters, 'validators') }}</li>*/
+/*                 {% endfor %}*/
+/*             </ul>*/
+/*         {% endif %}*/
+/*     {% endspaceless %}*/
+/* {% endblock field_errors %}*/
+/* */
+/* {% block stylesheets %}*/
+/*     {{ parent() }}*/
+/*     <link rel="stylesheet" href="{{ asset('bundles/ensmanon/css/job.css') }}" type="text/css" media="all" />*/
+/* {% endblock %}*/
+/* */
 /* {% block content %}*/
 /*     <h1>Job edit</h1>*/
+/*     <form action="{{ path('job_update', { 'token': job.token }) }}" method="post" {{ form_enctype(edit_form) }}>*/
+/*         <table id="job_form">*/
+/*             <tfoot>*/
+/*             <tr>*/
+/*                 <td colspan="2">*/
+/*                     <input type="submit" value="Preview your job" />*/
+/*                 </td>*/
+/*             </tr>*/
+/*             </tfoot>*/
+/*             <tbody>*/
+/*             <tr>*/
+/*                 <th>{{ form_label(edit_form.category) }}</th>*/
+/*                 <td>*/
+/*                     {{ form_errors(edit_form.category) }}*/
+/*                     {{ form_widget(edit_form.category) }}*/
+/*                 </td>*/
+/*             </tr>*/
+/*             <tr>*/
+/*                 <th>{{ form_label(edit_form.type) }}</th>*/
+/*                 <td>*/
+/*                     {{ form_errors(edit_form.type) }}*/
+/*                     {{ form_widget(edit_form.type) }}*/
+/*                 </td>*/
+/*             </tr>*/
+/*             <tr>*/
+/*                 <th>{{ form_label(edit_form.company) }}</th>*/
+/*                 <td>*/
+/*                     {{ form_errors(edit_form.company) }}*/
+/*                     {{ form_widget(edit_form.company) }}*/
+/*                 </td>*/
+/*             </tr>*/
+/*             <tr>*/
+/*                 <th>{{ form_label(edit_form.file) }}</th>*/
+/*                 <td>*/
+/*                     {{ form_errors(edit_form.file) }}*/
+/*                     {{ form_widget(edit_form.file) }}*/
+/*                 </td>*/
+/*             </tr>*/
+/*             <tr>*/
+/*                 <th>{{ form_label(edit_form.url) }}</th>*/
+/*                 <td>*/
+/*                     {{ form_errors(edit_form.url) }}*/
+/*                     {{ form_widget(edit_form.url) }}*/
+/*                 </td>*/
+/*             </tr>*/
+/*             <tr>*/
+/*                 <th>{{ form_label(edit_form.position) }}</th>*/
+/*                 <td>*/
+/*                     {{ form_errors(edit_form.position) }}*/
+/*                     {{ form_widget(edit_form.position) }}*/
+/*                 </td>*/
+/*             </tr>*/
+/*             <tr>*/
+/*                 <th>{{ form_label(edit_form.location) }}</th>*/
+/*                 <td>*/
+/*                     {{ form_errors(edit_form.location) }}*/
+/*                     {{ form_widget(edit_form.location) }}*/
+/*                 </td>*/
+/*             </tr>*/
+/*             <tr>*/
+/*                 <th>{{ form_label(edit_form.description) }}</th>*/
+/*                 <td>*/
+/*                     {{ form_errors(edit_form.description) }}*/
+/*                     {{ form_widget(edit_form.description) }}*/
+/*                 </td>*/
+/*             </tr>*/
+/*             <tr>*/
+/*                 <th>{{ form_label(edit_form.how_to_apply) }}</th>*/
+/*                 <td>*/
+/*                     {{ form_errors(edit_form.how_to_apply) }}*/
+/*                     {{ form_widget(edit_form.how_to_apply) }}*/
+/*                 </td>*/
+/*             </tr>*/
+/*             <tr>*/
+/*                 <th>{{ form_label(edit_form.is_public) }}</th>*/
+/*                 <td>*/
+/*                     {{ form_errors(edit_form.is_public) }}*/
+/*                     {{ form_widget(edit_form.is_public) }}*/
+/*                     <br /> Whether the job can also be published on affiliate websites or not.*/
+/*                 </td>*/
+/*             </tr>*/
+/*             <tr>*/
+/*                 <th>{{ form_label(edit_form.email) }}</th>*/
+/*                 <td>*/
+/*                     {{ form_errors(edit_form.email) }}*/
+/*                     {{ form_widget(edit_form.email) }}*/
+/*                 </td>*/
+/*             </tr>*/
+/*             </tbody>*/
+/*         </table>*/
 /* */
-/*     {{ form_start(edit_form) }}*/
-/*         {{ form_widget(edit_form) }}*/
-/*         <input type="submit" value="Edit" />*/
-/*     {{ form_end(edit_form) }}*/
-/* */
-/*     <ul>*/
-/*         <li>*/
-/*             <a href="{{ path('job_index') }}">Back to the list</a>*/
-/*         </li>*/
-/*         <li>*/
-/*             {{ form_start(delete_form) }}*/
-/*                 <input type="submit" value="Delete">*/
-/*             {{ form_end(delete_form) }}*/
-/*         </li>*/
-/*     </ul>*/
+/*         {{ form_rest(edit_form) }}*/
+/*     </form>*/
 /* {% endblock %}*/
