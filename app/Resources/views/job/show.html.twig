@@ -42,10 +42,12 @@
             <small>posted on {{ job.createdat|date('m/d/Y') }}</small>
         </div>
 
+        {% if not job.isActivated %}
         <div style="padding: 20px 0">
             <a href="{{ path('job_edit', { 'token': job.token }) }}">
                 Edit
             </a>
         </div>
+        {% endif %}
     </div>
 {% endblock %}
