@@ -90,11 +90,13 @@ class JobController extends Controller
 
         $deleteForm = $this->createDeleteForm($job->getId());
         $publishForm = $this->createPublishForm($job->getToken());
+        $extendForm = $this->createExtendForm($job->getToken());
 
         return $this->render('job/show.html.twig', array(
             'job'      => $job,
             'delete_form' => $deleteForm->createView(),
             'publish_form' => $publishForm->createView(),
+            'extend_form' => $extendForm->createView(),
         ));
     }
 
@@ -110,6 +112,9 @@ class JobController extends Controller
 
         if (!$job) {
             throw $this->createNotFoundException('Unable to find Job entity.');
+        }
+        if ($job->getIsActivated()) {
+            throw $this->createNotFoundException('Job is activated and cannot be edited.');
         }
 
         $deleteForm = $this->createDeleteForm($job);
@@ -254,6 +259,47 @@ class JobController extends Controller
     }
 
     private function createPublishForm($token)
+    {
+        return $this->createFormBuilder(array('token' => $token))
+            ->add('token', 'hidden')
+            ->getForm()
+            ;
+    }
+
+    public function extendAction(Request $request, $token)
+    {
+        $form = $this->createExtendForm($token);
+
+        $form->handleRequest($request);
+
+        if ($form->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $job = $em->getRepository('EnsManonBundle:Job')->findOneByToken($token);
+
+            if (!$job) {
+                throw $this->createNotFoundException('Unable to find Job entity.');
+            }
+
+            if (!$job->extend()) {
+                throw $this->createNotFoundException('Unable to find extend the Job.');
+            }
+
+            $em->persist($job);
+            $em->flush();
+
+            $this->get('session')->setFlash('notice', sprintf('Your job validity has been extended until %s.',
+                $job->getExpiresAt()->format('m/d/Y')));
+        }
+
+        return $this->redirect($this->generateUrl('job_preview', array(
+            'company' => $job->getCompanySlug(),
+            'location' => $job->getLocationSlug(),
+            'token' => $job->getToken(),
+            'position' => $job->getPositionSlug()
+        )));
+    }
+
+    private function createExtendForm($token)
     {
         return $this->createFormBuilder(array('token' => $token))
             ->add('token', 'hidden')

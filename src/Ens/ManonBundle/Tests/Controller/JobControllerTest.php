@@ -142,7 +142,7 @@ class JobControllerTest extends WebTestCase
                 ->count() == 1);
     }
 
-    public function createJob($values = array())
+    public function createJob($values = array(), $publish = false)
     {
         $client = static::createClient();
         $crawler = $client->request('GET', '/job/new');
@@ -160,7 +160,26 @@ class JobControllerTest extends WebTestCase
         $client->submit($form);
         $client->followRedirect();
 
+        if($publish) {
+            $crawler = $client->getCrawler();
+            $form = $crawler->selectButton('Publish')->form();
+            $client->submit($form);
+            $client->followRedirect();
+        }
+
         return $client;
+    }
+
+    public function getJobByPosition($position)
+    {
+        $kernel = static::createKernel();
+        $kernel->boot();
+        $em = $kernel->getContainer()->get('doctrine.orm.entity_manager');
+
+        $query = $em->createQuery('SELECT j from EnsManonBundle:Job j WHERE j.position = :position');
+        $query->setParameter('position', $position);
+        $query->setMaxResults(1);
+        return $query->getSingleResult();
     }
 
     public function testPublishJob()
@@ -195,4 +214,35 @@ class JobControllerTest extends WebTestCase
         $query->setParameter('position', 'FOO2');
         $this->assertTrue(0 == $query->getSingleScalarResult());
     }
+
+    public function testExtendJob()
+    {
+        // A job validity cannot be extended before the job expires soon
+        $client = $this->createJob(array('job[position]' => 'FOO4'), true);
+        $crawler = $client->getCrawler();
+        $this->assertTrue($crawler->filter('input[type=submit]:contains("Extend")')->count() == 0);
+
+        // A job validity can be extended when the job expires soon
+
+        // Create a new FOO5 job
+        $client = $this->createJob(array('job[position]' => 'FOO5'), true);
+        // Get the job and change the expire date to today
+        $kernel = static::createKernel();
+        $kernel->boot();
+        $em = $kernel->getContainer()->get('doctrine.orm.entity_manager');
+        $job = $em->getRepository('EnsManonBundle:Job')->findOneByPosition('FOO5');
+        $job->setExpiresAt(new \DateTime());
+        $em->flush();
+        // Go to the preview page and extend the job
+        $crawler = $client->request('GET', sprintf('/job/%s/%s/%s/%s', $job->getCompanySlug(), $job->getLocationSlug(),
+            $job->getToken(), $job->getPositionSlug()));
+        $crawler = $client->getCrawler();
+        $form = $crawler->selectButton('Extend')->form();
+        $client->submit($form);
+        // Reload the job from db
+        $job = $this->getJobByPosition('FOO5');
+        // Check the expiration date
+        $this->assertTrue($job->getExpiresAt()->format('y/m/d') == date('y/m/d', time() + 86400 * 30));
+    }
+
 }
