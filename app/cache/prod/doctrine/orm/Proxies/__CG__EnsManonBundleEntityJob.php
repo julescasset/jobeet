@@ -64,10 +64,10 @@ class Job extends \Ens\ManonBundle\Entity\Job implements \Doctrine\ORM\Proxy\Pro
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'id', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'type', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'company', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'logo', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'url', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'position', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'location', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'description', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'how_to_apply', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'token', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'is_public', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'is_activated', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'email', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'expires_at', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'created_at', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'updated_at', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'category'];
+            return ['__isInitialized__', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'id', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'type', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'company', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'logo', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'url', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'position', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'location', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'description', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'how_to_apply', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'token', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'is_public', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'is_activated', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'email', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'expires_at', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'created_at', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'updated_at', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'category', 'file'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'id', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'type', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'company', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'logo', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'url', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'position', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'location', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'description', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'how_to_apply', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'token', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'is_public', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'is_activated', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'email', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'expires_at', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'created_at', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'updated_at', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'category'];
+        return ['__isInitialized__', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'id', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'type', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'company', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'logo', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'url', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'position', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'location', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'description', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'how_to_apply', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'token', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'is_public', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'is_activated', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'email', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'expires_at', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'created_at', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'updated_at', '' . "\0" . 'Ens\\ManonBundle\\Entity\\Job' . "\0" . 'category', 'file'];
     }
 
     /**
@@ -604,6 +604,116 @@ class Job extends \Ens\ManonBundle\Entity\Job implements \Doctrine\ORM\Proxy\Pro
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'setExpiresAtValue', []);
 
         return parent::setExpiresAtValue();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getWebPath()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getWebPath', []);
+
+        return parent::getWebPath();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getAbsolutePath()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getAbsolutePath', []);
+
+        return parent::getAbsolutePath();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function preUpload()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'preUpload', []);
+
+        return parent::preUpload();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function upload()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'upload', []);
+
+        return parent::upload();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function removeUpload()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeUpload', []);
+
+        return parent::removeUpload();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setTokenValue()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setTokenValue', []);
+
+        return parent::setTokenValue();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function isExpired()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isExpired', []);
+
+        return parent::isExpired();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function expiresSoon()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'expiresSoon', []);
+
+        return parent::expiresSoon();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getDaysBeforeExpires()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getDaysBeforeExpires', []);
+
+        return parent::getDaysBeforeExpires();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function publish()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'publish', []);
+
+        return parent::publish();
     }
 
 }

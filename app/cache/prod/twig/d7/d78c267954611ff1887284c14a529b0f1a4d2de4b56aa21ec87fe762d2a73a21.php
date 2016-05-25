@@ -56,53 +56,62 @@ class __TwigTemplate_424dae81e3f43805f86e8e53cf5cd6d14978787ee6fb19ed6985824547a
     public function block_content($context, array $blocks = array())
     {
         // line 13
+        echo "    ";
+        if ($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "request", array()), "get", array(0 => "token"), "method")) {
+            // line 14
+            echo "        ";
+            $this->loadTemplate(":Job:admin.html.twig", "job/show.html.twig", 14)->display(array_merge($context, array("job" => (isset($context["job"]) ? $context["job"] : null))));
+            // line 15
+            echo "    ";
+        }
+        // line 16
         echo "    <div id=\"job\">
         <h1>";
-        // line 14
+        // line 17
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["job"]) ? $context["job"] : null), "company", array()), "html", null, true);
         echo "</h1>
         <h2>";
-        // line 15
+        // line 18
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["job"]) ? $context["job"] : null), "location", array()), "html", null, true);
         echo "</h2>
         <h3>
             ";
-        // line 17
+        // line 20
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["job"]) ? $context["job"] : null), "position", array()), "html", null, true);
         echo "
             <small> - ";
-        // line 18
+        // line 21
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["job"]) ? $context["job"] : null), "type", array()), "html", null, true);
         echo "</small>
         </h3>
 
         ";
-        // line 21
+        // line 24
         if ($this->getAttribute((isset($context["job"]) ? $context["job"] : null), "logo", array())) {
-            // line 22
+            // line 25
             echo "            <div class=\"logo\">
                 <a href=\"";
-            // line 23
+            // line 26
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["job"]) ? $context["job"] : null), "url", array()), "html", null, true);
             echo "\">
                     <img src=\"";
-            // line 24
+            // line 27
             echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/ensmanon/images/"), "html", null, true);
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["job"]) ? $context["job"] : null), "logo", array()), "html", null, true);
             echo "\"
                          alt=\"";
-            // line 25
+            // line 28
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["job"]) ? $context["job"] : null), "company", array()), "html", null, true);
             echo " logo\" />
                 </a>
             </div>
         ";
         }
-        // line 29
+        // line 32
         echo "
         <div class=\"description\">
             ";
-        // line 31
+        // line 34
         echo nl2br(twig_escape_filter($this->env, $this->getAttribute((isset($context["job"]) ? $context["job"] : null), "description", array()), "html", null, true));
         echo "
         </div>
@@ -110,21 +119,21 @@ class __TwigTemplate_424dae81e3f43805f86e8e53cf5cd6d14978787ee6fb19ed6985824547a
         <h4>How to apply?</h4>
 
         <p class=\"how_to_apply\">";
-        // line 36
+        // line 39
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["job"]) ? $context["job"] : null), "howtoapply", array()), "html", null, true);
         echo "</p>
 
         <div class=\"meta\">
             <small>posted on ";
-        // line 39
+        // line 42
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["job"]) ? $context["job"] : null), "createdat", array()), "m/d/Y"), "html", null, true);
         echo "</small>
         </div>
 
         <div style=\"padding: 20px 0\">
             <a href=\"";
-        // line 43
-        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("job_edit", array("id" => $this->getAttribute((isset($context["job"]) ? $context["job"] : null), "id", array()))), "html", null, true);
+        // line 46
+        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("job_edit", array("token" => $this->getAttribute((isset($context["job"]) ? $context["job"] : null), "token", array()))), "html", null, true);
         echo "\">
                 Edit
             </a>
@@ -145,7 +154,7 @@ class __TwigTemplate_424dae81e3f43805f86e8e53cf5cd6d14978787ee6fb19ed6985824547a
 
     public function getDebugInfo()
     {
-        return array (  127 => 43,  120 => 39,  114 => 36,  106 => 31,  102 => 29,  95 => 25,  90 => 24,  86 => 23,  83 => 22,  81 => 21,  75 => 18,  71 => 17,  66 => 15,  62 => 14,  59 => 13,  56 => 12,  50 => 9,  45 => 8,  42 => 7,  33 => 4,  30 => 3,  11 => 1,);
+        return array (  136 => 46,  129 => 42,  123 => 39,  115 => 34,  111 => 32,  104 => 28,  99 => 27,  95 => 26,  92 => 25,  90 => 24,  84 => 21,  80 => 20,  75 => 18,  71 => 17,  68 => 16,  65 => 15,  62 => 14,  59 => 13,  56 => 12,  50 => 9,  45 => 8,  42 => 7,  33 => 4,  30 => 3,  11 => 1,);
     }
 }
 /* {% extends 'EnsManonBundle::layout.html.twig' %}*/
@@ -160,6 +169,9 @@ class __TwigTemplate_424dae81e3f43805f86e8e53cf5cd6d14978787ee6fb19ed6985824547a
 /* {% endblock %}*/
 /*  */
 /* {% block content %}*/
+/*     {% if app.request.get('token') %}*/
+/*         {% include ':Job:admin.html.twig' with {'job': job} %}*/
+/*     {% endif %}*/
 /*     <div id="job">*/
 /*         <h1>{{ job.company }}</h1>*/
 /*         <h2>{{ job.location }}</h2>*/
@@ -190,7 +202,7 @@ class __TwigTemplate_424dae81e3f43805f86e8e53cf5cd6d14978787ee6fb19ed6985824547a
 /*         </div>*/
 /* */
 /*         <div style="padding: 20px 0">*/
-/*             <a href="{{ path('job_edit', { 'id': job.id }) }}">*/
+/*             <a href="{{ path('job_edit', { 'token': job.token }) }}">*/
 /*                 Edit*/
 /*             </a>*/
 /*         </div>*/

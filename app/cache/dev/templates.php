@@ -114,6 +114,7 @@
   '::base.html.twig' => 'C:\\wamp\\www\\jobeet\\app/Resources\\views/base.html.twig',
   ':category:show.html.twig' => 'C:\\wamp\\www\\jobeet\\app/Resources\\views/category/show.html.twig',
   ':default:index.html.twig' => 'C:\\wamp\\www\\jobeet\\app/Resources\\views/default/index.html.twig',
+  ':job:admin.html.twig' => 'C:\\wamp\\www\\jobeet\\app/Resources\\views/job/admin.html.twig',
   ':job:edit.html.twig' => 'C:\\wamp\\www\\jobeet\\app/Resources\\views/job/edit.html.twig',
   ':job:index.html.twig' => 'C:\\wamp\\www\\jobeet\\app/Resources\\views/job/index.html.twig',
   ':job:list.html.twig' => 'C:\\wamp\\www\\jobeet\\app/Resources\\views/job/list.html.twig',
