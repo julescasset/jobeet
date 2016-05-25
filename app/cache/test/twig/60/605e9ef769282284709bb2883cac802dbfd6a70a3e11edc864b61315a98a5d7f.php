@@ -23,20 +23,20 @@ class __TwigTemplate_6b08d76806f88da73d1cac8be4ca51bd07a4f9c00e93f1a0a5c6cd536bf
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_f90eae9f6174728b3b5fd47806258e659deca6ed8bd70e6514363a780c97b9c6 = $this->env->getExtension("native_profiler");
-        $__internal_f90eae9f6174728b3b5fd47806258e659deca6ed8bd70e6514363a780c97b9c6->enter($__internal_f90eae9f6174728b3b5fd47806258e659deca6ed8bd70e6514363a780c97b9c6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "job/show.html.twig"));
+        $__internal_d0d40151773c1751f2dbae9c224cb206198252a838a2eaf244566cf208676bb0 = $this->env->getExtension("native_profiler");
+        $__internal_d0d40151773c1751f2dbae9c224cb206198252a838a2eaf244566cf208676bb0->enter($__internal_d0d40151773c1751f2dbae9c224cb206198252a838a2eaf244566cf208676bb0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "job/show.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_f90eae9f6174728b3b5fd47806258e659deca6ed8bd70e6514363a780c97b9c6->leave($__internal_f90eae9f6174728b3b5fd47806258e659deca6ed8bd70e6514363a780c97b9c6_prof);
+        $__internal_d0d40151773c1751f2dbae9c224cb206198252a838a2eaf244566cf208676bb0->leave($__internal_d0d40151773c1751f2dbae9c224cb206198252a838a2eaf244566cf208676bb0_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_d668e06da8a68fc79c1d28ea85c7ad54eddbd2c3eacc5413b805b0dce8d99d8e = $this->env->getExtension("native_profiler");
-        $__internal_d668e06da8a68fc79c1d28ea85c7ad54eddbd2c3eacc5413b805b0dce8d99d8e->enter($__internal_d668e06da8a68fc79c1d28ea85c7ad54eddbd2c3eacc5413b805b0dce8d99d8e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_8e2f221346bd36b8bbfe00e480676c0a1ebf6871c5a6598bde5a6d41cf0ed03c = $this->env->getExtension("native_profiler");
+        $__internal_8e2f221346bd36b8bbfe00e480676c0a1ebf6871c5a6598bde5a6d41cf0ed03c->enter($__internal_8e2f221346bd36b8bbfe00e480676c0a1ebf6871c5a6598bde5a6d41cf0ed03c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         // line 4
         echo "    ";
@@ -46,15 +46,15 @@ class __TwigTemplate_6b08d76806f88da73d1cac8be4ca51bd07a4f9c00e93f1a0a5c6cd536bf
         echo "
 ";
         
-        $__internal_d668e06da8a68fc79c1d28ea85c7ad54eddbd2c3eacc5413b805b0dce8d99d8e->leave($__internal_d668e06da8a68fc79c1d28ea85c7ad54eddbd2c3eacc5413b805b0dce8d99d8e_prof);
+        $__internal_8e2f221346bd36b8bbfe00e480676c0a1ebf6871c5a6598bde5a6d41cf0ed03c->leave($__internal_8e2f221346bd36b8bbfe00e480676c0a1ebf6871c5a6598bde5a6d41cf0ed03c_prof);
 
     }
 
     // line 7
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_9fcf5aa9ceba802e148a42fe49af3c692fe99926a080c87eae9bfeaa97c791b6 = $this->env->getExtension("native_profiler");
-        $__internal_9fcf5aa9ceba802e148a42fe49af3c692fe99926a080c87eae9bfeaa97c791b6->enter($__internal_9fcf5aa9ceba802e148a42fe49af3c692fe99926a080c87eae9bfeaa97c791b6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_f9d80cb1a5a9641b5f057f43799416836f347b5b53c5738ed61b53c690543e85 = $this->env->getExtension("native_profiler");
+        $__internal_f9d80cb1a5a9641b5f057f43799416836f347b5b53c5738ed61b53c690543e85->enter($__internal_f9d80cb1a5a9641b5f057f43799416836f347b5b53c5738ed61b53c690543e85_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 8
         echo "    ";
@@ -66,64 +66,73 @@ class __TwigTemplate_6b08d76806f88da73d1cac8be4ca51bd07a4f9c00e93f1a0a5c6cd536bf
         echo "\" type=\"text/css\" media=\"all\" />
 ";
         
-        $__internal_9fcf5aa9ceba802e148a42fe49af3c692fe99926a080c87eae9bfeaa97c791b6->leave($__internal_9fcf5aa9ceba802e148a42fe49af3c692fe99926a080c87eae9bfeaa97c791b6_prof);
+        $__internal_f9d80cb1a5a9641b5f057f43799416836f347b5b53c5738ed61b53c690543e85->leave($__internal_f9d80cb1a5a9641b5f057f43799416836f347b5b53c5738ed61b53c690543e85_prof);
 
     }
 
     // line 12
     public function block_content($context, array $blocks = array())
     {
-        $__internal_3be10b6c9241fb8e135a6e31d98d14a61588f294c3345ccb5f1f6e728ab491f0 = $this->env->getExtension("native_profiler");
-        $__internal_3be10b6c9241fb8e135a6e31d98d14a61588f294c3345ccb5f1f6e728ab491f0->enter($__internal_3be10b6c9241fb8e135a6e31d98d14a61588f294c3345ccb5f1f6e728ab491f0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_2b85fe127a39cf55fd87d48b52101cc83f6ccbce832f2293d954f078d117713e = $this->env->getExtension("native_profiler");
+        $__internal_2b85fe127a39cf55fd87d48b52101cc83f6ccbce832f2293d954f078d117713e->enter($__internal_2b85fe127a39cf55fd87d48b52101cc83f6ccbce832f2293d954f078d117713e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 13
+        echo "    ";
+        if ($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "get", array(0 => "token"), "method")) {
+            // line 14
+            echo "        ";
+            $this->loadTemplate(":Job:admin.html.twig", "job/show.html.twig", 14)->display(array_merge($context, array("job" => (isset($context["job"]) ? $context["job"] : $this->getContext($context, "job")))));
+            // line 15
+            echo "    ";
+        }
+        // line 16
         echo "    <div id=\"job\">
         <h1>";
-        // line 14
+        // line 17
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["job"]) ? $context["job"] : $this->getContext($context, "job")), "company", array()), "html", null, true);
         echo "</h1>
         <h2>";
-        // line 15
+        // line 18
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["job"]) ? $context["job"] : $this->getContext($context, "job")), "location", array()), "html", null, true);
         echo "</h2>
         <h3>
             ";
-        // line 17
+        // line 20
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["job"]) ? $context["job"] : $this->getContext($context, "job")), "position", array()), "html", null, true);
         echo "
             <small> - ";
-        // line 18
+        // line 21
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["job"]) ? $context["job"] : $this->getContext($context, "job")), "type", array()), "html", null, true);
         echo "</small>
         </h3>
 
         ";
-        // line 21
+        // line 24
         if ($this->getAttribute((isset($context["job"]) ? $context["job"] : $this->getContext($context, "job")), "logo", array())) {
-            // line 22
+            // line 25
             echo "            <div class=\"logo\">
                 <a href=\"";
-            // line 23
+            // line 26
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["job"]) ? $context["job"] : $this->getContext($context, "job")), "url", array()), "html", null, true);
             echo "\">
                     <img src=\"";
-            // line 24
+            // line 27
             echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/ensmanon/images/"), "html", null, true);
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["job"]) ? $context["job"] : $this->getContext($context, "job")), "logo", array()), "html", null, true);
             echo "\"
                          alt=\"";
-            // line 25
+            // line 28
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["job"]) ? $context["job"] : $this->getContext($context, "job")), "company", array()), "html", null, true);
             echo " logo\" />
                 </a>
             </div>
         ";
         }
-        // line 29
+        // line 32
         echo "
         <div class=\"description\">
             ";
-        // line 31
+        // line 34
         echo nl2br(twig_escape_filter($this->env, $this->getAttribute((isset($context["job"]) ? $context["job"] : $this->getContext($context, "job")), "description", array()), "html", null, true));
         echo "
         </div>
@@ -131,29 +140,20 @@ class __TwigTemplate_6b08d76806f88da73d1cac8be4ca51bd07a4f9c00e93f1a0a5c6cd536bf
         <h4>How to apply?</h4>
 
         <p class=\"how_to_apply\">";
-        // line 36
+        // line 39
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["job"]) ? $context["job"] : $this->getContext($context, "job")), "howtoapply", array()), "html", null, true);
         echo "</p>
 
         <div class=\"meta\">
             <small>posted on ";
-        // line 39
+        // line 42
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["job"]) ? $context["job"] : $this->getContext($context, "job")), "createdat", array()), "m/d/Y"), "html", null, true);
         echo "</small>
-        </div>
-
-        <div style=\"padding: 20px 0\">
-            <a href=\"";
-        // line 43
-        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("job_edit", array("id" => $this->getAttribute((isset($context["job"]) ? $context["job"] : $this->getContext($context, "job")), "id", array()))), "html", null, true);
-        echo "\">
-                Edit
-            </a>
         </div>
     </div>
 ";
         
-        $__internal_3be10b6c9241fb8e135a6e31d98d14a61588f294c3345ccb5f1f6e728ab491f0->leave($__internal_3be10b6c9241fb8e135a6e31d98d14a61588f294c3345ccb5f1f6e728ab491f0_prof);
+        $__internal_2b85fe127a39cf55fd87d48b52101cc83f6ccbce832f2293d954f078d117713e->leave($__internal_2b85fe127a39cf55fd87d48b52101cc83f6ccbce832f2293d954f078d117713e_prof);
 
     }
 
@@ -169,7 +169,7 @@ class __TwigTemplate_6b08d76806f88da73d1cac8be4ca51bd07a4f9c00e93f1a0a5c6cd536bf
 
     public function getDebugInfo()
     {
-        return array (  148 => 43,  141 => 39,  135 => 36,  127 => 31,  123 => 29,  116 => 25,  111 => 24,  107 => 23,  104 => 22,  102 => 21,  96 => 18,  92 => 17,  87 => 15,  83 => 14,  80 => 13,  74 => 12,  65 => 9,  60 => 8,  54 => 7,  42 => 4,  36 => 3,  11 => 1,);
+        return array (  150 => 42,  144 => 39,  136 => 34,  132 => 32,  125 => 28,  120 => 27,  116 => 26,  113 => 25,  111 => 24,  105 => 21,  101 => 20,  96 => 18,  92 => 17,  89 => 16,  86 => 15,  83 => 14,  80 => 13,  74 => 12,  65 => 9,  60 => 8,  54 => 7,  42 => 4,  36 => 3,  11 => 1,);
     }
 }
 /* {% extends 'EnsManonBundle::layout.html.twig' %}*/
@@ -184,6 +184,9 @@ class __TwigTemplate_6b08d76806f88da73d1cac8be4ca51bd07a4f9c00e93f1a0a5c6cd536bf
 /* {% endblock %}*/
 /*  */
 /* {% block content %}*/
+/*     {% if app.request.get('token') %}*/
+/*         {% include ':Job:admin.html.twig' with {'job': job} %}*/
+/*     {% endif %}*/
 /*     <div id="job">*/
 /*         <h1>{{ job.company }}</h1>*/
 /*         <h2>{{ job.location }}</h2>*/
@@ -211,12 +214,6 @@ class __TwigTemplate_6b08d76806f88da73d1cac8be4ca51bd07a4f9c00e93f1a0a5c6cd536bf
 /* */
 /*         <div class="meta">*/
 /*             <small>posted on {{ job.createdat|date('m/d/Y') }}</small>*/
-/*         </div>*/
-/* */
-/*         <div style="padding: 20px 0">*/
-/*             <a href="{{ path('job_edit', { 'id': job.id }) }}">*/
-/*                 Edit*/
-/*             </a>*/
 /*         </div>*/
 /*     </div>*/
 /* {% endblock %}*/

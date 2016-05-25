@@ -130,6 +130,7 @@ class JobControllerTest extends WebTestCase
         $crawler = $client->submit($form);
 
         // check if we have 3 errors
+        dump($crawler->filter('.error_list')->count());
         $this->assertTrue($crawler->filter('.error_list')->count() == 3);
         // check if we have error on job_description field
         $this->assertTrue($crawler->filter('#job_description')->siblings()->first()->filter('.error_list')

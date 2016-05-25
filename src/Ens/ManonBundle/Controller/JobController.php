@@ -247,7 +247,7 @@ class JobController extends Controller
             $em->persist($job);
             $em->flush();
 
-            $this->get('session')->setFlash('notice', 'Your job is now online for 30 days.');
+            $this->addFlash('notice', 'Your job is now online for 30 days.');
         }
 
         return $this->redirect($this->generateUrl('ens_job_preview', array(
@@ -287,7 +287,7 @@ class JobController extends Controller
             $em->persist($job);
             $em->flush();
 
-            $this->get('session')->setFlash('notice', sprintf('Your job validity has been extended until %s.',
+            $this->addFlash('notice', sprintf('Your job validity has been extended until %s.',
                 $job->getExpiresAt()->format('m/d/Y')));
         }
 
