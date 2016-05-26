@@ -250,7 +250,7 @@ class JobController extends Controller
             $this->addFlash('notice', 'Your job is now online for 30 days.');
         }
 
-        return $this->redirect($this->generateUrl('ens_job_preview', array(
+        return $this->redirect($this->generateUrl('job_preview', array(
             'company' => $job->getCompanySlug(),
             'location' => $job->getLocationSlug(),
             'token' => $job->getToken(),

@@ -19,3 +19,8 @@ a0f3bc,127.0.0.1,GET,http://jobeet.local/app_dev.php/job/company-101/paris-franc
 dcc170,127.0.0.1,GET,http://jobeet.local/app_dev.php/,1464211035,,200
 163a89,127.0.0.1,GET,http://jobeet.local/app_dev.php/job/company-101/paris-france/2/web-developer,1464212696,,200
 e20058,127.0.0.1,GET,http://jobeet.local/app_dev.php/,1464212714,,200
+850367,127.0.0.1,GET,http://jobeet.local/app_dev.php/,1464248774,,200
+799449,127.0.0.1,GET,http://jobeet.local/app_dev.php/,1464249189,,200
+f46c46,127.0.0.1,GET,http://jobeet.local/app_dev.php/job/new,1464249432,,200
+1c97e9,127.0.0.1,POST,http://jobeet.local/app_dev.php/job/create,1464249659,,302
+ba9d97,127.0.0.1,GET,http://jobeet.local/app_dev.php/job/1/3/3fc53a63737c98457bd83babe6a54e1e859d3636/2,1464249661,,200

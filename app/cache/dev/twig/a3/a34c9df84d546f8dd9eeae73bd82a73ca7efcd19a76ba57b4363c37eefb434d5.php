@@ -15,8 +15,8 @@ class __TwigTemplate_15b48fa9ad84de0777714c668b78b9d7642747b4c9aefb092ea3d41f3e3
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_1b6ec134d75ccf61e0a726dc45a603ced405ffbaab09a798551bff5ae5fdf0e0 = $this->env->getExtension("native_profiler");
-        $__internal_1b6ec134d75ccf61e0a726dc45a603ced405ffbaab09a798551bff5ae5fdf0e0->enter($__internal_1b6ec134d75ccf61e0a726dc45a603ced405ffbaab09a798551bff5ae5fdf0e0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":Job:admin.html.twig"));
+        $__internal_5f45ffbffd11a920a189dab5d2d18e5a9fe9aaf0237b7a273ab38aa574734abb = $this->env->getExtension("native_profiler");
+        $__internal_5f45ffbffd11a920a189dab5d2d18e5a9fe9aaf0237b7a273ab38aa574734abb->enter($__internal_5f45ffbffd11a920a189dab5d2d18e5a9fe9aaf0237b7a273ab38aa574734abb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":Job:admin.html.twig"));
 
         // line 1
         echo "<div id=\"job_actions\">
@@ -83,29 +83,37 @@ class __TwigTemplate_15b48fa9ad84de0777714c668b78b9d7642747b4c9aefb092ea3d41f3e3
             // line 26
             if ($this->getAttribute((isset($context["job"]) ? $context["job"] : $this->getContext($context, "job")), "expiresSoon", array())) {
                 // line 27
-                echo "                    - <a href=\"\">Extend</a> for another 30 days
+                echo "                    <form action=\"";
+                echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("job_extend", array("token" => $this->getAttribute((isset($context["job"]) ? $context["job"] : $this->getContext($context, "job")), "token", array()))), "html", null, true);
+                echo "\" method=\"post\">
+                        ";
+                // line 28
+                echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["extend_form"]) ? $context["extend_form"] : $this->getContext($context, "extend_form")), 'widget');
+                echo "
+                        <button type=\"submit\">Extend</button> for another 30 days
+                    </form>
                 ";
             }
-            // line 29
+            // line 32
             echo "            </li>
         ";
         } else {
-            // line 31
+            // line 34
             echo "            <li>
                 [Bookmark this <a href=\"";
-            // line 32
-            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getUrl("job_preview", array("token" => $this->getAttribute((isset($context["job"]) ? $context["job"] : $this->getContext($context, "job")), "token", array()), "company" => $this->getAttribute((isset($context["job"]) ? $context["job"] : $this->getContext($context, "job")), "companyslug", array()), "location" => $this->getAttribute(            // line 33
+            // line 35
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getUrl("job_preview", array("token" => $this->getAttribute((isset($context["job"]) ? $context["job"] : $this->getContext($context, "job")), "token", array()), "company" => $this->getAttribute((isset($context["job"]) ? $context["job"] : $this->getContext($context, "job")), "companyslug", array()), "location" => $this->getAttribute(            // line 36
 (isset($context["job"]) ? $context["job"] : $this->getContext($context, "job")), "locationslug", array()), "position" => $this->getAttribute((isset($context["job"]) ? $context["job"] : $this->getContext($context, "job")), "positionslug", array()))), "html", null, true);
             echo "\">URL</a>
                 to manage this job in the future.]
             </li>
         ";
         }
-        // line 37
+        // line 40
         echo "    </ul>
 </div>";
         
-        $__internal_1b6ec134d75ccf61e0a726dc45a603ced405ffbaab09a798551bff5ae5fdf0e0->leave($__internal_1b6ec134d75ccf61e0a726dc45a603ced405ffbaab09a798551bff5ae5fdf0e0_prof);
+        $__internal_5f45ffbffd11a920a189dab5d2d18e5a9fe9aaf0237b7a273ab38aa574734abb->leave($__internal_5f45ffbffd11a920a189dab5d2d18e5a9fe9aaf0237b7a273ab38aa574734abb_prof);
 
     }
 
@@ -121,7 +129,7 @@ class __TwigTemplate_15b48fa9ad84de0777714c668b78b9d7642747b4c9aefb092ea3d41f3e3
 
     public function getDebugInfo()
     {
-        return array (  105 => 37,  98 => 33,  97 => 32,  94 => 31,  90 => 29,  86 => 27,  84 => 26,  81 => 25,  75 => 23,  71 => 21,  69 => 20,  62 => 19,  60 => 18,  53 => 14,  49 => 13,  46 => 12,  38 => 7,  34 => 6,  29 => 5,  27 => 4,  22 => 1,);
+        return array (  113 => 40,  106 => 36,  105 => 35,  102 => 34,  98 => 32,  91 => 28,  86 => 27,  84 => 26,  81 => 25,  75 => 23,  71 => 21,  69 => 20,  62 => 19,  60 => 18,  53 => 14,  49 => 13,  46 => 12,  38 => 7,  34 => 6,  29 => 5,  27 => 4,  22 => 1,);
     }
 }
 /* <div id="job_actions">*/
@@ -150,7 +158,10 @@ class __TwigTemplate_15b48fa9ad84de0777714c668b78b9d7642747b4c9aefb092ea3d41f3e3
 /*                 {% endif %}*/
 /* */
 /*                 {% if job.expiresSoon %}*/
-/*                     - <a href="">Extend</a> for another 30 days*/
+/*                     <form action="{{ path('job_extend', { 'token': job.token }) }}" method="post">*/
+/*                         {{ form_widget(extend_form) }}*/
+/*                         <button type="submit">Extend</button> for another 30 days*/
+/*                     </form>*/
 /*                 {% endif %}*/
 /*             </li>*/
 /*         {% else %}*/
