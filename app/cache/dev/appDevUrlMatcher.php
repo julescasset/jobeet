@@ -239,6 +239,135 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  '_route' => 'homepage',);
         }
 
+        if (0 === strpos($pathinfo, '/admin')) {
+            // sonata_admin_redirect
+            if (rtrim($pathinfo, '/') === '/admin') {
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'sonata_admin_redirect');
+                }
+
+                return array (  '_controller' => 'Symfony\\Bundle\\FrameworkBundle\\Controller\\RedirectController::redirectAction',  'route' => 'sonata_admin_dashboard',  'permanent' => 'true',  '_route' => 'sonata_admin_redirect',);
+            }
+
+            // sonata_admin_dashboard
+            if ($pathinfo === '/admin/dashboard') {
+                return array (  '_controller' => 'Sonata\\AdminBundle\\Controller\\CoreController::dashboardAction',  '_route' => 'sonata_admin_dashboard',);
+            }
+
+            if (0 === strpos($pathinfo, '/admin/core')) {
+                // sonata_admin_retrieve_form_element
+                if ($pathinfo === '/admin/core/get-form-field-element') {
+                    return array (  '_controller' => 'sonata.admin.controller.admin:retrieveFormFieldElementAction',  '_route' => 'sonata_admin_retrieve_form_element',);
+                }
+
+                // sonata_admin_append_form_element
+                if ($pathinfo === '/admin/core/append-form-field-element') {
+                    return array (  '_controller' => 'sonata.admin.controller.admin:appendFormFieldElementAction',  '_route' => 'sonata_admin_append_form_element',);
+                }
+
+                // sonata_admin_short_object_information
+                if (0 === strpos($pathinfo, '/admin/core/get-short-object-description') && preg_match('#^/admin/core/get\\-short\\-object\\-description(?:\\.(?P<_format>html|json))?$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'sonata_admin_short_object_information')), array (  '_controller' => 'sonata.admin.controller.admin:getShortObjectDescriptionAction',  '_format' => 'html',));
+                }
+
+                // sonata_admin_set_object_field_value
+                if ($pathinfo === '/admin/core/set-object-field-value') {
+                    return array (  '_controller' => 'sonata.admin.controller.admin:setObjectFieldValueAction',  '_route' => 'sonata_admin_set_object_field_value',);
+                }
+
+            }
+
+            // sonata_admin_search
+            if ($pathinfo === '/admin/search') {
+                return array (  '_controller' => 'Sonata\\AdminBundle\\Controller\\CoreController::searchAction',  '_route' => 'sonata_admin_search',);
+            }
+
+            // sonata_admin_retrieve_autocomplete_items
+            if ($pathinfo === '/admin/core/get-autocomplete-items') {
+                return array (  '_controller' => 'sonata.admin.controller.admin:retrieveAutocompleteItemsAction',  '_route' => 'sonata_admin_retrieve_autocomplete_items',);
+            }
+
+            if (0 === strpos($pathinfo, '/admin/ens/manon')) {
+                if (0 === strpos($pathinfo, '/admin/ens/manon/category')) {
+                    // admin_ens_manon_category_list
+                    if ($pathinfo === '/admin/ens/manon/category/list') {
+                        return array (  '_controller' => 'Ens\\ManonBundle\\Controller\\CategoryAdminController::listAction',  '_sonata_admin' => 'ens.manon.admin.category',  '_sonata_name' => 'admin_ens_manon_category_list',  '_route' => 'admin_ens_manon_category_list',);
+                    }
+
+                    // admin_ens_manon_category_create
+                    if ($pathinfo === '/admin/ens/manon/category/create') {
+                        return array (  '_controller' => 'Ens\\ManonBundle\\Controller\\CategoryAdminController::createAction',  '_sonata_admin' => 'ens.manon.admin.category',  '_sonata_name' => 'admin_ens_manon_category_create',  '_route' => 'admin_ens_manon_category_create',);
+                    }
+
+                    // admin_ens_manon_category_batch
+                    if ($pathinfo === '/admin/ens/manon/category/batch') {
+                        return array (  '_controller' => 'Ens\\ManonBundle\\Controller\\CategoryAdminController::batchAction',  '_sonata_admin' => 'ens.manon.admin.category',  '_sonata_name' => 'admin_ens_manon_category_batch',  '_route' => 'admin_ens_manon_category_batch',);
+                    }
+
+                    // admin_ens_manon_category_edit
+                    if (preg_match('#^/admin/ens/manon/category/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_ens_manon_category_edit')), array (  '_controller' => 'Ens\\ManonBundle\\Controller\\CategoryAdminController::editAction',  '_sonata_admin' => 'ens.manon.admin.category',  '_sonata_name' => 'admin_ens_manon_category_edit',));
+                    }
+
+                    // admin_ens_manon_category_delete
+                    if (preg_match('#^/admin/ens/manon/category/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_ens_manon_category_delete')), array (  '_controller' => 'Ens\\ManonBundle\\Controller\\CategoryAdminController::deleteAction',  '_sonata_admin' => 'ens.manon.admin.category',  '_sonata_name' => 'admin_ens_manon_category_delete',));
+                    }
+
+                    // admin_ens_manon_category_show
+                    if (preg_match('#^/admin/ens/manon/category/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_ens_manon_category_show')), array (  '_controller' => 'Ens\\ManonBundle\\Controller\\CategoryAdminController::showAction',  '_sonata_admin' => 'ens.manon.admin.category',  '_sonata_name' => 'admin_ens_manon_category_show',));
+                    }
+
+                    // admin_ens_manon_category_export
+                    if ($pathinfo === '/admin/ens/manon/category/export') {
+                        return array (  '_controller' => 'Ens\\ManonBundle\\Controller\\CategoryAdminController::exportAction',  '_sonata_admin' => 'ens.manon.admin.category',  '_sonata_name' => 'admin_ens_manon_category_export',  '_route' => 'admin_ens_manon_category_export',);
+                    }
+
+                }
+
+                if (0 === strpos($pathinfo, '/admin/ens/manon/job')) {
+                    // admin_ens_manon_job_list
+                    if ($pathinfo === '/admin/ens/manon/job/list') {
+                        return array (  '_controller' => 'Ens\\ManonBundle\\Controller\\JobAdminController::listAction',  '_sonata_admin' => 'ens.manon.admin.job',  '_sonata_name' => 'admin_ens_manon_job_list',  '_route' => 'admin_ens_manon_job_list',);
+                    }
+
+                    // admin_ens_manon_job_create
+                    if ($pathinfo === '/admin/ens/manon/job/create') {
+                        return array (  '_controller' => 'Ens\\ManonBundle\\Controller\\JobAdminController::createAction',  '_sonata_admin' => 'ens.manon.admin.job',  '_sonata_name' => 'admin_ens_manon_job_create',  '_route' => 'admin_ens_manon_job_create',);
+                    }
+
+                    // admin_ens_manon_job_batch
+                    if ($pathinfo === '/admin/ens/manon/job/batch') {
+                        return array (  '_controller' => 'Ens\\ManonBundle\\Controller\\JobAdminController::batchAction',  '_sonata_admin' => 'ens.manon.admin.job',  '_sonata_name' => 'admin_ens_manon_job_batch',  '_route' => 'admin_ens_manon_job_batch',);
+                    }
+
+                    // admin_ens_manon_job_edit
+                    if (preg_match('#^/admin/ens/manon/job/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_ens_manon_job_edit')), array (  '_controller' => 'Ens\\ManonBundle\\Controller\\JobAdminController::editAction',  '_sonata_admin' => 'ens.manon.admin.job',  '_sonata_name' => 'admin_ens_manon_job_edit',));
+                    }
+
+                    // admin_ens_manon_job_delete
+                    if (preg_match('#^/admin/ens/manon/job/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_ens_manon_job_delete')), array (  '_controller' => 'Ens\\ManonBundle\\Controller\\JobAdminController::deleteAction',  '_sonata_admin' => 'ens.manon.admin.job',  '_sonata_name' => 'admin_ens_manon_job_delete',));
+                    }
+
+                    // admin_ens_manon_job_show
+                    if (preg_match('#^/admin/ens/manon/job/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'admin_ens_manon_job_show')), array (  '_controller' => 'Ens\\ManonBundle\\Controller\\JobAdminController::showAction',  '_sonata_admin' => 'ens.manon.admin.job',  '_sonata_name' => 'admin_ens_manon_job_show',));
+                    }
+
+                    // admin_ens_manon_job_export
+                    if ($pathinfo === '/admin/ens/manon/job/export') {
+                        return array (  '_controller' => 'Ens\\ManonBundle\\Controller\\JobAdminController::exportAction',  '_sonata_admin' => 'ens.manon.admin.job',  '_sonata_name' => 'admin_ens_manon_job_export',  '_route' => 'admin_ens_manon_job_export',);
+                    }
+
+                }
+
+            }
+
+        }
+
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
     }
 }
