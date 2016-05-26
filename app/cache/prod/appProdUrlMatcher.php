@@ -119,6 +119,17 @@ class appProdUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirecta
             }
             not_job_publish:
 
+            // job_extend
+            if (preg_match('#^/job/(?P<token>[^/]++)/extend$#s', $pathinfo, $matches)) {
+                if ($this->context->getMethod() != 'POST') {
+                    $allow[] = 'POST';
+                    goto not_job_extend;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'job_extend')), array (  '_controller' => 'Ens\\ManonBundle\\Controller\\JobController::extendAction',));
+            }
+            not_job_extend:
+
         }
 
         // category_show

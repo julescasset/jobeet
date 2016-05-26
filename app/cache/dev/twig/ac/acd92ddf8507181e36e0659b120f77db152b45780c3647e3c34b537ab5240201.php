@@ -1,0 +1,219 @@
+<?php
+
+/* job/show.html.twig */
+class __TwigTemplate_406f30e827139193d1aef90c16eb0fa4db76ce2dadc1f37093528f8e8d6a789f extends Twig_Template
+{
+    public function __construct(Twig_Environment $env)
+    {
+        parent::__construct($env);
+
+        // line 1
+        $this->parent = $this->loadTemplate("EnsManonBundle::layout.html.twig", "job/show.html.twig", 1);
+        $this->blocks = array(
+            'title' => array($this, 'block_title'),
+            'stylesheets' => array($this, 'block_stylesheets'),
+            'content' => array($this, 'block_content'),
+        );
+    }
+
+    protected function doGetParent(array $context)
+    {
+        return "EnsManonBundle::layout.html.twig";
+    }
+
+    protected function doDisplay(array $context, array $blocks = array())
+    {
+        $__internal_838e02dca31a2b654ddad69981f9a0c77ef875f4b62067c821e689e7c23f4761 = $this->env->getExtension("native_profiler");
+        $__internal_838e02dca31a2b654ddad69981f9a0c77ef875f4b62067c821e689e7c23f4761->enter($__internal_838e02dca31a2b654ddad69981f9a0c77ef875f4b62067c821e689e7c23f4761_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "job/show.html.twig"));
+
+        $this->parent->display($context, array_merge($this->blocks, $blocks));
+        
+        $__internal_838e02dca31a2b654ddad69981f9a0c77ef875f4b62067c821e689e7c23f4761->leave($__internal_838e02dca31a2b654ddad69981f9a0c77ef875f4b62067c821e689e7c23f4761_prof);
+
+    }
+
+    // line 3
+    public function block_title($context, array $blocks = array())
+    {
+        $__internal_f151aff88d5340591e53506fba5edc682af7c18744523beadcb6777d6ab6dd32 = $this->env->getExtension("native_profiler");
+        $__internal_f151aff88d5340591e53506fba5edc682af7c18744523beadcb6777d6ab6dd32->enter($__internal_f151aff88d5340591e53506fba5edc682af7c18744523beadcb6777d6ab6dd32_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+
+        // line 4
+        echo "    ";
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["job"]) ? $context["job"] : $this->getContext($context, "job")), "company", array()), "html", null, true);
+        echo " is looking for a ";
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["job"]) ? $context["job"] : $this->getContext($context, "job")), "position", array()), "html", null, true);
+        echo "
+";
+        
+        $__internal_f151aff88d5340591e53506fba5edc682af7c18744523beadcb6777d6ab6dd32->leave($__internal_f151aff88d5340591e53506fba5edc682af7c18744523beadcb6777d6ab6dd32_prof);
+
+    }
+
+    // line 7
+    public function block_stylesheets($context, array $blocks = array())
+    {
+        $__internal_6d4538f5e8cd5866c612201d70f90606c36f0119f4d3c4856aa9c4cb414a73ae = $this->env->getExtension("native_profiler");
+        $__internal_6d4538f5e8cd5866c612201d70f90606c36f0119f4d3c4856aa9c4cb414a73ae->enter($__internal_6d4538f5e8cd5866c612201d70f90606c36f0119f4d3c4856aa9c4cb414a73ae_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+
+        // line 8
+        echo "    ";
+        $this->displayParentBlock("stylesheets", $context, $blocks);
+        echo "
+    <link rel=\"stylesheet\" href=\"";
+        // line 9
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/ensmanon/css/job.css"), "html", null, true);
+        echo "\" type=\"text/css\" media=\"all\" />
+";
+        
+        $__internal_6d4538f5e8cd5866c612201d70f90606c36f0119f4d3c4856aa9c4cb414a73ae->leave($__internal_6d4538f5e8cd5866c612201d70f90606c36f0119f4d3c4856aa9c4cb414a73ae_prof);
+
+    }
+
+    // line 12
+    public function block_content($context, array $blocks = array())
+    {
+        $__internal_2599c26b52a6e3a9fc1957b74b8663522e118f906ad6bb075f74f778a37a7d7d = $this->env->getExtension("native_profiler");
+        $__internal_2599c26b52a6e3a9fc1957b74b8663522e118f906ad6bb075f74f778a37a7d7d->enter($__internal_2599c26b52a6e3a9fc1957b74b8663522e118f906ad6bb075f74f778a37a7d7d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+
+        // line 13
+        echo "    ";
+        if ($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "request", array()), "get", array(0 => "token"), "method")) {
+            // line 14
+            echo "        ";
+            $this->loadTemplate(":Job:admin.html.twig", "job/show.html.twig", 14)->display(array_merge($context, array("job" => (isset($context["job"]) ? $context["job"] : $this->getContext($context, "job")))));
+            // line 15
+            echo "    ";
+        }
+        // line 16
+        echo "    <div id=\"job\">
+        <h1>";
+        // line 17
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["job"]) ? $context["job"] : $this->getContext($context, "job")), "company", array()), "html", null, true);
+        echo "</h1>
+        <h2>";
+        // line 18
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["job"]) ? $context["job"] : $this->getContext($context, "job")), "location", array()), "html", null, true);
+        echo "</h2>
+        <h3>
+            ";
+        // line 20
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["job"]) ? $context["job"] : $this->getContext($context, "job")), "position", array()), "html", null, true);
+        echo "
+            <small> - ";
+        // line 21
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["job"]) ? $context["job"] : $this->getContext($context, "job")), "type", array()), "html", null, true);
+        echo "</small>
+        </h3>
+
+        ";
+        // line 24
+        if ($this->getAttribute((isset($context["job"]) ? $context["job"] : $this->getContext($context, "job")), "logo", array())) {
+            // line 25
+            echo "            <div class=\"logo\">
+                <a href=\"";
+            // line 26
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["job"]) ? $context["job"] : $this->getContext($context, "job")), "url", array()), "html", null, true);
+            echo "\">
+                    <img src=\"";
+            // line 27
+            echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/ensmanon/images/"), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["job"]) ? $context["job"] : $this->getContext($context, "job")), "logo", array()), "html", null, true);
+            echo "\"
+                         alt=\"";
+            // line 28
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["job"]) ? $context["job"] : $this->getContext($context, "job")), "company", array()), "html", null, true);
+            echo " logo\" />
+                </a>
+            </div>
+        ";
+        }
+        // line 32
+        echo "
+        <div class=\"description\">
+            ";
+        // line 34
+        echo nl2br(twig_escape_filter($this->env, $this->getAttribute((isset($context["job"]) ? $context["job"] : $this->getContext($context, "job")), "description", array()), "html", null, true));
+        echo "
+        </div>
+
+        <h4>How to apply?</h4>
+
+        <p class=\"how_to_apply\">";
+        // line 39
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["job"]) ? $context["job"] : $this->getContext($context, "job")), "howtoapply", array()), "html", null, true);
+        echo "</p>
+
+        <div class=\"meta\">
+            <small>posted on ";
+        // line 42
+        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["job"]) ? $context["job"] : $this->getContext($context, "job")), "createdat", array()), "m/d/Y"), "html", null, true);
+        echo "</small>
+        </div>
+    </div>
+";
+        
+        $__internal_2599c26b52a6e3a9fc1957b74b8663522e118f906ad6bb075f74f778a37a7d7d->leave($__internal_2599c26b52a6e3a9fc1957b74b8663522e118f906ad6bb075f74f778a37a7d7d_prof);
+
+    }
+
+    public function getTemplateName()
+    {
+        return "job/show.html.twig";
+    }
+
+    public function isTraitable()
+    {
+        return false;
+    }
+
+    public function getDebugInfo()
+    {
+        return array (  150 => 42,  144 => 39,  136 => 34,  132 => 32,  125 => 28,  120 => 27,  116 => 26,  113 => 25,  111 => 24,  105 => 21,  101 => 20,  96 => 18,  92 => 17,  89 => 16,  86 => 15,  83 => 14,  80 => 13,  74 => 12,  65 => 9,  60 => 8,  54 => 7,  42 => 4,  36 => 3,  11 => 1,);
+    }
+}
+/* {% extends 'EnsManonBundle::layout.html.twig' %}*/
+/*  */
+/* {% block title %}*/
+/*     {{ job.company }} is looking for a {{ job.position }}*/
+/* {% endblock %}*/
+/*  */
+/* {% block stylesheets %}*/
+/*     {{ parent() }}*/
+/*     <link rel="stylesheet" href="{{ asset('bundles/ensmanon/css/job.css') }}" type="text/css" media="all" />*/
+/* {% endblock %}*/
+/*  */
+/* {% block content %}*/
+/*     {% if app.request.get('token') %}*/
+/*         {% include ':Job:admin.html.twig' with {'job': job} %}*/
+/*     {% endif %}*/
+/*     <div id="job">*/
+/*         <h1>{{ job.company }}</h1>*/
+/*         <h2>{{ job.location }}</h2>*/
+/*         <h3>*/
+/*             {{ job.position }}*/
+/*             <small> - {{ job.type }}</small>*/
+/*         </h3>*/
+/* */
+/*         {% if job.logo %}*/
+/*             <div class="logo">*/
+/*                 <a href="{{ job.url }}">*/
+/*                     <img src="{{ asset('bundles/ensmanon/images/') }}{{ job.logo }}"*/
+/*                          alt="{{ job.company }} logo" />*/
+/*                 </a>*/
+/*             </div>*/
+/*         {% endif %}*/
+/* */
+/*         <div class="description">*/
+/*             {{ job.description|nl2br }}*/
+/*         </div>*/
+/* */
+/*         <h4>How to apply?</h4>*/
+/* */
+/*         <p class="how_to_apply">{{ job.howtoapply }}</p>*/
+/* */
+/*         <div class="meta">*/
+/*             <small>posted on {{ job.createdat|date('m/d/Y') }}</small>*/
+/*         </div>*/
+/*     </div>*/
+/* {% endblock %}*/

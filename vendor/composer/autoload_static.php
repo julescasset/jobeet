@@ -18,6 +18,7 @@ class ComposerStaticInit854c4c729554a13481ff07c7e0c47904
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '6a47392539ca2329373e0d33e1dba053' => __DIR__ . '/..' . '/symfony/polyfill-intl-icu/bootstrap.php',
         '32dcc8afd4335739640db7d200c1971d' => __DIR__ . '/..' . '/symfony/polyfill-apcu/bootstrap.php',
+        '8ac9dba77d5c65db2811440ee8265f5d' => __DIR__ . '/..' . '/sonata-project/block-bundle/Resources/stubs/symfony2.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -40,6 +41,12 @@ class ComposerStaticInit854c4c729554a13481ff07c7e0c47904
             'Symfony\\Bridge\\PhpUnit\\' => 23,
             'Symfony\\Bridge\\Monolog\\' => 23,
             'Symfony\\Bridge\\Doctrine\\' => 24,
+            'Sonata\\DoctrineORMAdminBundle\\' => 30,
+            'Sonata\\CoreBundle\\' => 18,
+            'Sonata\\Cache\\Tests\\' => 19,
+            'Sonata\\Cache\\' => 13,
+            'Sonata\\BlockBundle\\' => 19,
+            'Sonata\\AdminBundle\\' => 19,
             'Sensio\\Bundle\\GeneratorBundle\\' => 30,
             'Sensio\\Bundle\\FrameworkExtraBundle\\' => 35,
             'Sensio\\Bundle\\DistributionBundle\\' => 33,
@@ -47,6 +54,11 @@ class ComposerStaticInit854c4c729554a13481ff07c7e0c47904
         'M' => 
         array (
             'Monolog\\' => 8,
+        ),
+        'K' => 
+        array (
+            'Knp\\Menu\\' => 9,
+            'Knp\\Bundle\\MenuBundle\\' => 22,
         ),
         'I' => 
         array (
@@ -60,6 +72,10 @@ class ComposerStaticInit854c4c729554a13481ff07c7e0c47904
             'Doctrine\\Bundle\\FixturesBundle\\' => 31,
             'Doctrine\\Bundle\\DoctrineCacheBundle\\' => 36,
             'Doctrine\\Bundle\\DoctrineBundle\\' => 31,
+        ),
+        'C' => 
+        array (
+            'Cocur\\Slugify\\' => 14,
         ),
     );
 
@@ -132,6 +148,30 @@ class ComposerStaticInit854c4c729554a13481ff07c7e0c47904
         array (
             0 => __DIR__ . '/..' . '/symfony/symfony/src/Symfony/Bridge/Doctrine',
         ),
+        'Sonata\\DoctrineORMAdminBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/sonata-project/doctrine-orm-admin-bundle',
+        ),
+        'Sonata\\CoreBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/sonata-project/core-bundle',
+        ),
+        'Sonata\\Cache\\Tests\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/sonata-project/cache/test',
+        ),
+        'Sonata\\Cache\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/sonata-project/cache/lib',
+        ),
+        'Sonata\\BlockBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/sonata-project/block-bundle',
+        ),
+        'Sonata\\AdminBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/sonata-project/admin-bundle',
+        ),
         'Sensio\\Bundle\\GeneratorBundle\\' => 
         array (
             0 => __DIR__ . '/..' . '/sensio/generator-bundle',
@@ -147,6 +187,14 @@ class ComposerStaticInit854c4c729554a13481ff07c7e0c47904
         'Monolog\\' => 
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
+        ),
+        'Knp\\Menu\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/knplabs/knp-menu/src/Knp/Menu',
+        ),
+        'Knp\\Bundle\\MenuBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/knplabs/knp-menu-bundle',
         ),
         'Incenteev\\ParameterHandler\\' => 
         array (
@@ -176,6 +224,10 @@ class ComposerStaticInit854c4c729554a13481ff07c7e0c47904
         array (
             0 => __DIR__ . '/..' . '/doctrine/doctrine-bundle',
         ),
+        'Cocur\\Slugify\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/cocur/slugify/src',
+        ),
     );
 
     public static $fallbackDirsPsr4 = array (
@@ -185,6 +237,10 @@ class ComposerStaticInit854c4c729554a13481ff07c7e0c47904
     public static $prefixesPsr0 = array (
         'T' => 
         array (
+            'Twig_Extensions_' => 
+            array (
+                0 => __DIR__ . '/..' . '/twig/extensions/lib',
+            ),
             'Twig_' => 
             array (
                 0 => __DIR__ . '/..' . '/twig/twig/lib',
@@ -202,6 +258,13 @@ class ComposerStaticInit854c4c729554a13481ff07c7e0c47904
             'Psr\\Log\\' => 
             array (
                 0 => __DIR__ . '/..' . '/psr/log',
+            ),
+        ),
+        'E' => 
+        array (
+            'Exporter' => 
+            array (
+                0 => __DIR__ . '/..' . '/sonata-project/exporter/lib',
             ),
         ),
         'D' => 

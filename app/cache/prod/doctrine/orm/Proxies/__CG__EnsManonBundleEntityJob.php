@@ -716,4 +716,15 @@ class Job extends \Ens\ManonBundle\Entity\Job implements \Doctrine\ORM\Proxy\Pro
         return parent::publish();
     }
 
+    /**
+     * {@inheritDoc}
+     */
+    public function extend()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'extend', []);
+
+        return parent::extend();
+    }
+
 }
