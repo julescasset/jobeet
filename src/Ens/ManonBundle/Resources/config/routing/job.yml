@@ -44,3 +44,8 @@ job_publish:
     path:  /{token}/publish
     defaults: { _controller: "EnsManonBundle:Job:publish" }
     methods:  POST
+
+job_extend:
+    path:  /{token}/extend
+    defaults: { _controller: "EnsManonBundle:Job:extend" }
+    methods:  POST
