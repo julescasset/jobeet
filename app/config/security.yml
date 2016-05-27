@@ -9,17 +9,16 @@ security:
             form_login:
                 login_path:  /login
                 check_path:  /login_check
+            logout:
+                path:   /logout
+                target: /
 
     access_control:
         - { path: ^/admin, roles: ROLE_ADMIN }
 
     providers:
         main:
-            memory:
-                users:
-                    admin:
-                        password: adminpass
-                        roles: ROLE_ADMIN
+            entity: { class: Ens\ManonBundle\Entity\User, property: username }
 
     encoders:
-        Symfony\Component\Security\Core\User\User: plaintext
+        Ens\ManonBundle\Entity\User: sha512

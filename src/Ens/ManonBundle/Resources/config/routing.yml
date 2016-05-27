@@ -13,5 +13,9 @@ ens_manon_homepage:
 login:
     path:   /login
     defaults:  { _controller: EnsManonBundle:Default:login }
+
 login_check:
     path:   /login_check
+
+logout:
+    path:   /logout

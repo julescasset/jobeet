@@ -900,15 +900,34 @@ return $controller;
 }
 }
 }
-namespace Symfony\Component\Security\Core\User
+namespace Symfony\Component\Security\Http
 {
-use Symfony\Component\Security\Core\Exception\UsernameNotFoundException;
-use Symfony\Component\Security\Core\Exception\UnsupportedUserException;
-interface UserProviderInterface
+use Symfony\Component\HttpFoundation\Request;
+interface AccessMapInterface
 {
-public function loadUserByUsername($username);
-public function refreshUser(UserInterface $user);
-public function supportsClass($class);
+public function getPatterns(Request $request);
+}
+}
+namespace Symfony\Component\Security\Http
+{
+use Symfony\Component\HttpFoundation\RequestMatcherInterface;
+use Symfony\Component\HttpFoundation\Request;
+class AccessMap implements AccessMapInterface
+{
+private $map = array();
+public function add(RequestMatcherInterface $requestMatcher, array $attributes = array(), $channel = null)
+{
+$this->map[] = array($requestMatcher, $attributes, $channel);
+}
+public function getPatterns(Request $request)
+{
+foreach ($this->map as $elements) {
+if (null === $elements[0] || $elements[0]->matches($request)) {
+return array($elements[1], $elements[2]);
+}
+}
+return array(null, null);
+}
 }
 }
 namespace Symfony\Component\Security\Http
@@ -5485,329 +5504,6 @@ public function reorder(array $keys)
 {
 $this->list->reorder($keys);
 return $this;
-}
-}
-}
-namespace Sonata\AdminBundle\Datagrid
-{
-interface PagerInterface
-{
-public function init();
-public function getMaxPerPage();
-public function setMaxPerPage($max);
-public function setPage($page);
-public function setQuery($query);
-public function getResults();
-public function setMaxPageLinks($maxPageLinks);
-public function getMaxPageLinks();
-}
-}
-namespace Sonata\AdminBundle\Datagrid
-{
-abstract class Pager implements \Iterator, \Countable, \Serializable, PagerInterface
-{
-const TYPE_DEFAULT ='default';
-const TYPE_SIMPLE ='simple';
-protected $page = 1;
-protected $maxPerPage = 0;
-protected $lastPage = 1;
-protected $nbResults = 0;
-protected $cursor = 1;
-protected $parameters = array();
-protected $currentMaxLink = 1;
-protected $maxRecordLimit = false;
-protected $maxPageLinks = 0;
-protected $results = null;
-protected $resultsCounter = 0;
-protected $query = null;
-protected $countColumn = array('id');
-public function __construct($maxPerPage = 10)
-{
-$this->setMaxPerPage($maxPerPage);
-}
-public function getCurrentMaxLink()
-{
-return $this->currentMaxLink;
-}
-public function getMaxRecordLimit()
-{
-return $this->maxRecordLimit;
-}
-public function setMaxRecordLimit($limit)
-{
-$this->maxRecordLimit = $limit;
-}
-public function getLinks($nbLinks = null)
-{
-if ($nbLinks == null) {
-$nbLinks = $this->getMaxPageLinks();
-}
-$links = array();
-$tmp = $this->page - floor($nbLinks / 2);
-$check = $this->lastPage - $nbLinks + 1;
-$limit = $check > 0 ? $check : 1;
-$begin = $tmp > 0 ? ($tmp > $limit ? $limit : $tmp) : 1;
-$i = (int) $begin;
-while ($i < $begin + $nbLinks && $i <= $this->lastPage) {
-$links[] = $i++;
-}
-$this->currentMaxLink = count($links) ? $links[count($links) - 1] : 1;
-return $links;
-}
-public function haveToPaginate()
-{
-return $this->getMaxPerPage() && $this->getNbResults() > $this->getMaxPerPage();
-}
-public function getCursor()
-{
-return $this->cursor;
-}
-public function setCursor($pos)
-{
-if ($pos < 1) {
-$this->cursor = 1;
-} else {
-if ($pos > $this->nbResults) {
-$this->cursor = $this->nbResults;
-} else {
-$this->cursor = $pos;
-}
-}
-}
-public function getObjectByCursor($pos)
-{
-$this->setCursor($pos);
-return $this->getCurrent();
-}
-public function getCurrent()
-{
-return $this->retrieveObject($this->cursor);
-}
-public function getNext()
-{
-if ($this->cursor + 1 > $this->nbResults) {
-return;
-} else {
-return $this->retrieveObject($this->cursor + 1);
-}
-}
-public function getPrevious()
-{
-if ($this->cursor - 1 < 1) {
-return;
-} else {
-return $this->retrieveObject($this->cursor - 1);
-}
-}
-public function getFirstIndice()
-{
-if ($this->page == 0) {
-return 1;
-} else {
-return ($this->page - 1) * $this->maxPerPage + 1;
-}
-}
-public function getLastIndice()
-{
-if ($this->page == 0) {
-return $this->nbResults;
-} else {
-if ($this->page * $this->maxPerPage >= $this->nbResults) {
-return $this->nbResults;
-} else {
-return $this->page * $this->maxPerPage;
-}
-}
-}
-public function getNbResults()
-{
-return $this->nbResults;
-}
-public function getFirstPage()
-{
-return 1;
-}
-public function getLastPage()
-{
-return $this->lastPage;
-}
-public function getPage()
-{
-return $this->page;
-}
-public function getNextPage()
-{
-return min($this->getPage() + 1, $this->getLastPage());
-}
-public function getPreviousPage()
-{
-return max($this->getPage() - 1, $this->getFirstPage());
-}
-public function setPage($page)
-{
-$this->page = intval($page);
-if ($this->page <= 0) {
-$this->page = $this->getMaxPerPage() ? 1 : 0;
-}
-}
-public function getMaxPerPage()
-{
-return $this->maxPerPage;
-}
-public function setMaxPerPage($max)
-{
-if ($max > 0) {
-$this->maxPerPage = $max;
-if ($this->page == 0) {
-$this->page = 1;
-}
-} else {
-if ($max == 0) {
-$this->maxPerPage = 0;
-$this->page = 0;
-} else {
-$this->maxPerPage = 1;
-if ($this->page == 0) {
-$this->page = 1;
-}
-}
-}
-}
-public function getMaxPageLinks()
-{
-return $this->maxPageLinks;
-}
-public function setMaxPageLinks($maxPageLinks)
-{
-$this->maxPageLinks = $maxPageLinks;
-}
-public function isFirstPage()
-{
-return 1 == $this->page;
-}
-public function isLastPage()
-{
-return $this->page == $this->lastPage;
-}
-public function getParameters()
-{
-return $this->parameters;
-}
-public function getParameter($name, $default = null)
-{
-return isset($this->parameters[$name]) ? $this->parameters[$name] : $default;
-}
-public function hasParameter($name)
-{
-return isset($this->parameters[$name]);
-}
-public function setParameter($name, $value)
-{
-$this->parameters[$name] = $value;
-}
-public function current()
-{
-if (!$this->isIteratorInitialized()) {
-$this->initializeIterator();
-}
-return current($this->results);
-}
-public function key()
-{
-if (!$this->isIteratorInitialized()) {
-$this->initializeIterator();
-}
-return key($this->results);
-}
-public function next()
-{
-if (!$this->isIteratorInitialized()) {
-$this->initializeIterator();
-}
---$this->resultsCounter;
-return next($this->results);
-}
-public function rewind()
-{
-if (!$this->isIteratorInitialized()) {
-$this->initializeIterator();
-}
-$this->resultsCounter = count($this->results);
-return reset($this->results);
-}
-public function valid()
-{
-if (!$this->isIteratorInitialized()) {
-$this->initializeIterator();
-}
-return $this->resultsCounter > 0;
-}
-public function count()
-{
-return $this->getNbResults();
-}
-public function serialize()
-{
-$vars = get_object_vars($this);
-unset($vars['query']);
-return serialize($vars);
-}
-public function unserialize($serialized)
-{
-$array = unserialize($serialized);
-foreach ($array as $name => $values) {
-$this->$name = $values;
-}
-}
-public function getCountColumn()
-{
-return $this->countColumn;
-}
-public function setCountColumn(array $countColumn)
-{
-return $this->countColumn = $countColumn;
-}
-public function setQuery($query)
-{
-$this->query = $query;
-}
-public function getQuery()
-{
-return $this->query;
-}
-protected function setNbResults($nb)
-{
-$this->nbResults = $nb;
-}
-protected function setLastPage($page)
-{
-$this->lastPage = $page;
-if ($this->getPage() > $page) {
-$this->setPage($page);
-}
-}
-protected function isIteratorInitialized()
-{
-return null !== $this->results;
-}
-protected function initializeIterator()
-{
-$this->results = $this->getResults();
-$this->resultsCounter = count($this->results);
-}
-protected function resetIterator()
-{
-$this->results = null;
-$this->resultsCounter = 0;
-}
-protected function retrieveObject($offset)
-{
-$queryForRetrieve = clone $this->getQuery();
-$queryForRetrieve
-->setFirstResult($offset - 1)
-->setMaxResults(1);
-$results = $queryForRetrieve->execute();
-return $results[0];
 }
 }
 }
