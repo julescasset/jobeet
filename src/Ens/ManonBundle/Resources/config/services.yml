@@ -1,0 +1,12 @@
+services:
+    ens.manon.admin.category:
+        class: Ens\ManonBundle\Admin\CategoryAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: jobeet, label: Categories }
+        arguments: [null, Ens\ManonBundle\Entity\Category, EnsManonBundle:CategoryAdmin]
+
+    ens.manon.admin.job:
+        class: Ens\ManonBundle\Admin\JobAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: jobeet, label: Jobs }
+        arguments: [null, Ens\ManonBundle\Entity\Job, EnsManonBundle:JobAdmin]

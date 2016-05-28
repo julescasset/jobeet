@@ -1,0 +1,24 @@
+# To get started with security, check out the documentation:
+# http://symfony.com/doc/current/book/security.html
+
+security:
+    firewalls:
+        secured_area:
+            pattern:    ^/
+            anonymous: ~
+            form_login:
+                login_path:  /login
+                check_path:  /login_check
+            logout:
+                path:   /logout
+                target: /
+
+    access_control:
+        - { path: ^/admin, roles: ROLE_ADMIN }
+
+    providers:
+        main:
+            entity: { class: Ens\ManonBundle\Entity\User, property: username }
+
+    encoders:
+        Ens\ManonBundle\Entity\User: sha512
