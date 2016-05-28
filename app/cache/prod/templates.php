@@ -96,7 +96,7 @@
   'SonataAdminBundle:Core:dashboard.html.twig' => 'C:\\wamp\\www\\jobeet\\vendor\\sonata-project\\admin-bundle/Resources/views/Core/dashboard.html.twig',
   'SonataAdminBundle:Core:search.html.twig' => 'C:\\wamp\\www\\jobeet\\vendor\\sonata-project\\admin-bundle/Resources/views/Core/search.html.twig',
   'SonataAdminBundle:Core:tab_menu_template.html.twig' => 'C:\\wamp\\www\\jobeet\\vendor\\sonata-project\\admin-bundle/Resources/views/Core/tab_menu_template.html.twig',
-  'SonataAdminBundle:Core:user_block.html.twig' => 'C:\\wamp\\www\\jobeet\\vendor\\sonata-project\\admin-bundle/Resources/views/Core/user_block.html.twig',
+  'SonataAdminBundle:Core:user_block.html.twig' => 'C:\\wamp\\www\\jobeet\\app/Resources/SonataAdminBundle/views/Core/user_block.html.twig',
   'SonataAdminBundle:CRUD:acl.html.twig' => 'C:\\wamp\\www\\jobeet\\vendor\\sonata-project\\admin-bundle/Resources/views/CRUD/acl.html.twig',
   'SonataAdminBundle:CRUD:action.html.twig' => 'C:\\wamp\\www\\jobeet\\vendor\\sonata-project\\admin-bundle/Resources/views/CRUD/action.html.twig',
   'SonataAdminBundle:CRUD:action_buttons.html.twig' => 'C:\\wamp\\www\\jobeet\\vendor\\sonata-project\\admin-bundle/Resources/views/CRUD/action_buttons.html.twig',

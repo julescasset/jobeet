@@ -19,8 +19,8 @@ class __TwigTemplate_2c4a182093eb8e53a1bd29d69d13559ee17c950177a83c77c777710332d
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_a3f902adddbbb695c376f49b83b76ae90c5562786d31fe09d2a53ad3135d4e7d = $this->env->getExtension("native_profiler");
-        $__internal_a3f902adddbbb695c376f49b83b76ae90c5562786d31fe09d2a53ad3135d4e7d->enter($__internal_a3f902adddbbb695c376f49b83b76ae90c5562786d31fe09d2a53ad3135d4e7d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "SonataAdminBundle:CRUD:list_outer_rows_mosaic.html.twig"));
+        $__internal_9bc364342c378c2db1579c557a7e3e907163cbc7e35c287fbe9abbcc3c19ac1b = $this->env->getExtension("native_profiler");
+        $__internal_9bc364342c378c2db1579c557a7e3e907163cbc7e35c287fbe9abbcc3c19ac1b->enter($__internal_9bc364342c378c2db1579c557a7e3e907163cbc7e35c287fbe9abbcc3c19ac1b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "SonataAdminBundle:CRUD:list_outer_rows_mosaic.html.twig"));
 
         // line 11
         echo "
@@ -147,15 +147,15 @@ This template can be customized to match your needs. You should only extends the
 </tr>
 ";
         
-        $__internal_a3f902adddbbb695c376f49b83b76ae90c5562786d31fe09d2a53ad3135d4e7d->leave($__internal_a3f902adddbbb695c376f49b83b76ae90c5562786d31fe09d2a53ad3135d4e7d_prof);
+        $__internal_9bc364342c378c2db1579c557a7e3e907163cbc7e35c287fbe9abbcc3c19ac1b->leave($__internal_9bc364342c378c2db1579c557a7e3e907163cbc7e35c287fbe9abbcc3c19ac1b_prof);
 
     }
 
     // line 34
     public function block_sonata_mosaic_background($context, array $blocks = array())
     {
-        $__internal_e70d96289723a427e0e1689d446d88e8fbf97bf91126e72de6c5876270f2564a = $this->env->getExtension("native_profiler");
-        $__internal_e70d96289723a427e0e1689d446d88e8fbf97bf91126e72de6c5876270f2564a->enter($__internal_e70d96289723a427e0e1689d446d88e8fbf97bf91126e72de6c5876270f2564a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "sonata_mosaic_background"));
+        $__internal_e2a24e6195a3077e184d2cba94c54059530ef80d09dcf4ad5301ebed0f842b22 = $this->env->getExtension("native_profiler");
+        $__internal_e2a24e6195a3077e184d2cba94c54059530ef80d09dcf4ad5301ebed0f842b22->enter($__internal_e2a24e6195a3077e184d2cba94c54059530ef80d09dcf4ad5301ebed0f842b22_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "sonata_mosaic_background"));
 
         // line 35
         echo "                                    <img src=\"";
@@ -163,15 +163,15 @@ This template can be customized to match your needs. You should only extends the
         echo "\" alt=\"\" />
                                 ";
         
-        $__internal_e70d96289723a427e0e1689d446d88e8fbf97bf91126e72de6c5876270f2564a->leave($__internal_e70d96289723a427e0e1689d446d88e8fbf97bf91126e72de6c5876270f2564a_prof);
+        $__internal_e2a24e6195a3077e184d2cba94c54059530ef80d09dcf4ad5301ebed0f842b22->leave($__internal_e2a24e6195a3077e184d2cba94c54059530ef80d09dcf4ad5301ebed0f842b22_prof);
 
     }
 
     // line 37
     public function block_sonata_mosaic_default_view($context, array $blocks = array())
     {
-        $__internal_79b016760c3adfefdaa24d9b0d383d6d1645facf942c27e9a5f0d203150b5e21 = $this->env->getExtension("native_profiler");
-        $__internal_79b016760c3adfefdaa24d9b0d383d6d1645facf942c27e9a5f0d203150b5e21->enter($__internal_79b016760c3adfefdaa24d9b0d383d6d1645facf942c27e9a5f0d203150b5e21_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "sonata_mosaic_default_view"));
+        $__internal_96c8e99510fd1976c45c9b139f5bdc813991a20d4fe1306e38e597e766bcc22d = $this->env->getExtension("native_profiler");
+        $__internal_96c8e99510fd1976c45c9b139f5bdc813991a20d4fe1306e38e597e766bcc22d->enter($__internal_96c8e99510fd1976c45c9b139f5bdc813991a20d4fe1306e38e597e766bcc22d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "sonata_mosaic_default_view"));
 
         // line 38
         echo "                                    <span class=\"mosaic-box-label label label-primary pull-right\">#";
@@ -179,15 +179,15 @@ This template can be customized to match your needs. You should only extends the
         echo "</span>
                                 ";
         
-        $__internal_79b016760c3adfefdaa24d9b0d383d6d1645facf942c27e9a5f0d203150b5e21->leave($__internal_79b016760c3adfefdaa24d9b0d383d6d1645facf942c27e9a5f0d203150b5e21_prof);
+        $__internal_96c8e99510fd1976c45c9b139f5bdc813991a20d4fe1306e38e597e766bcc22d->leave($__internal_96c8e99510fd1976c45c9b139f5bdc813991a20d4fe1306e38e597e766bcc22d_prof);
 
     }
 
     // line 47
     public function block_sonata_mosaic_hover_view($context, array $blocks = array())
     {
-        $__internal_1e7199b1cfa1ea1e6065fff92d99926677cfb6b71a5e63e147b67be5b53234a2 = $this->env->getExtension("native_profiler");
-        $__internal_1e7199b1cfa1ea1e6065fff92d99926677cfb6b71a5e63e147b67be5b53234a2->enter($__internal_1e7199b1cfa1ea1e6065fff92d99926677cfb6b71a5e63e147b67be5b53234a2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "sonata_mosaic_hover_view"));
+        $__internal_e1a9448c3be9b77c32f8ba725a5839eef1240617797aff70108f970e07ffb643 = $this->env->getExtension("native_profiler");
+        $__internal_e1a9448c3be9b77c32f8ba725a5839eef1240617797aff70108f970e07ffb643->enter($__internal_e1a9448c3be9b77c32f8ba725a5839eef1240617797aff70108f970e07ffb643_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "sonata_mosaic_hover_view"));
 
         // line 48
         echo "                                    <span class=\"mosaic-box-label label label-primary pull-right\">#";
@@ -199,15 +199,15 @@ This template can be customized to match your needs. You should only extends the
         echo "
                                 ";
         
-        $__internal_1e7199b1cfa1ea1e6065fff92d99926677cfb6b71a5e63e147b67be5b53234a2->leave($__internal_1e7199b1cfa1ea1e6065fff92d99926677cfb6b71a5e63e147b67be5b53234a2_prof);
+        $__internal_e1a9448c3be9b77c32f8ba725a5839eef1240617797aff70108f970e07ffb643->leave($__internal_e1a9448c3be9b77c32f8ba725a5839eef1240617797aff70108f970e07ffb643_prof);
 
     }
 
     // line 60
     public function block_sonata_mosaic_description($context, array $blocks = array())
     {
-        $__internal_d45b0f0b445079264e7b37d2945774d8032988c129a8562a093e3d53d3165fe6 = $this->env->getExtension("native_profiler");
-        $__internal_d45b0f0b445079264e7b37d2945774d8032988c129a8562a093e3d53d3165fe6->enter($__internal_d45b0f0b445079264e7b37d2945774d8032988c129a8562a093e3d53d3165fe6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "sonata_mosaic_description"));
+        $__internal_c2984e83c022612695ddc5d1881292a91ae6393169338e10ca6a66cf4e1ca90e = $this->env->getExtension("native_profiler");
+        $__internal_c2984e83c022612695ddc5d1881292a91ae6393169338e10ca6a66cf4e1ca90e->enter($__internal_c2984e83c022612695ddc5d1881292a91ae6393169338e10ca6a66cf4e1ca90e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "sonata_mosaic_description"));
 
         // line 61
         echo "                                ";
@@ -238,7 +238,7 @@ This template can be customized to match your needs. You should only extends the
         // line 68
         echo "                            ";
         
-        $__internal_d45b0f0b445079264e7b37d2945774d8032988c129a8562a093e3d53d3165fe6->leave($__internal_d45b0f0b445079264e7b37d2945774d8032988c129a8562a093e3d53d3165fe6_prof);
+        $__internal_c2984e83c022612695ddc5d1881292a91ae6393169338e10ca6a66cf4e1ca90e->leave($__internal_c2984e83c022612695ddc5d1881292a91ae6393169338e10ca6a66cf4e1ca90e_prof);
 
     }
 

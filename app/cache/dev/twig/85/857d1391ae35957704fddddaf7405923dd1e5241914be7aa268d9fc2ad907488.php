@@ -15,14 +15,14 @@ class __TwigTemplate_7ea225dca47ca20818f5b36064b14ce0422e4f4a1955ea3d70d881308f8
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_7b0df52395baec0bf104a60dc8738f631384027387543df8661aebe71cd5ab1f = $this->env->getExtension("native_profiler");
-        $__internal_7b0df52395baec0bf104a60dc8738f631384027387543df8661aebe71cd5ab1f->enter($__internal_7b0df52395baec0bf104a60dc8738f631384027387543df8661aebe71cd5ab1f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/form_widget_simple.html.php"));
+        $__internal_47b316fc2a0710ce2c4cabd69b64d20ff11b492414fc60599350834a8f0dd8e8 = $this->env->getExtension("native_profiler");
+        $__internal_47b316fc2a0710ce2c4cabd69b64d20ff11b492414fc60599350834a8f0dd8e8->enter($__internal_47b316fc2a0710ce2c4cabd69b64d20ff11b492414fc60599350834a8f0dd8e8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/form_widget_simple.html.php"));
 
         // line 1
         echo "<input type=\"<?php echo isset(\$type) ? \$view->escape(\$type) : 'text' ?>\" <?php echo \$view['form']->block(\$form, 'widget_attributes') ?><?php if (!empty(\$value) || is_numeric(\$value)): ?> value=\"<?php echo \$view->escape(\$value) ?>\"<?php endif ?> />
 ";
         
-        $__internal_7b0df52395baec0bf104a60dc8738f631384027387543df8661aebe71cd5ab1f->leave($__internal_7b0df52395baec0bf104a60dc8738f631384027387543df8661aebe71cd5ab1f_prof);
+        $__internal_47b316fc2a0710ce2c4cabd69b64d20ff11b492414fc60599350834a8f0dd8e8->leave($__internal_47b316fc2a0710ce2c4cabd69b64d20ff11b492414fc60599350834a8f0dd8e8_prof);
 
     }
 
