@@ -64,13 +64,32 @@ class JobController extends Controller
      * Finds and displays a Job entity.
      *
      */
-    public function showAction(Job $job)
+    public function showAction(Request $request, Job $job)
     {
         $deleteForm = $this->createDeleteForm($job);
 
         $em = $this->getDoctrine()->getManager();
 
         $job = $em->getRepository('EnsManonBundle:Job')->getActiveJob($job);
+
+        $session = $request->getSession();
+
+        $jobs = $session->get('job_history', array());
+
+        // store the job as an array so we can put it in the session and avoid entity serialize errors
+        $jobTab = array('id' => $job->getId(), 'position' => $job->getPosition(), 'company' => $job->getCompany(),
+            'companyslug' => $job->getCompanySlug(), 'locationslug' => $job->getLocationSlug(),
+            'positionslug' => $job->getPositionSlug());
+
+        if (!in_array($jobTab, $jobs)) {
+            // add the current job at the beginning of the array
+            array_unshift($jobs, $jobTab);
+
+            // store the new job history back into the session
+            $session->set('job_history', array_slice($jobs, 0, 3));
+        }
+
+        $deleteForm = $this->createDeleteForm($job->getId());
 
         return $this->render('job/show.html.twig', array(
             'job' => $job,

@@ -80,16 +80,48 @@ class __TwigTemplate_ae7e73f3b170480b83682983c9c64a797f508555ecc8f724d1ebef06dc1
         </div>
     </div>
 
+    <div id=\"job_history\">
+        Recent viewed jobs:
+        <ul>
+            ";
+        // line 50
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "session", array()), "get", array(0 => "job_history"), "method"));
+        foreach ($context['_seq'] as $context["_key"] => $context["job"]) {
+            // line 51
+            echo "                <li>
+                    <a href=\"";
+            // line 52
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("job_show", array("id" => $this->getAttribute($context["job"], "id", array()), "company" => $this->getAttribute($context["job"], "companyslug", array()), "location" => $this->getAttribute(            // line 53
+$context["job"], "locationslug", array()), "position" => $this->getAttribute($context["job"], "positionslug", array()))), "html", null, true);
+            echo "\">
+                        ";
+            // line 54
+            echo twig_escape_filter($this->env, $this->getAttribute($context["job"], "position", array()), "html", null, true);
+            echo " - ";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["job"], "company", array()), "html", null, true);
+            echo "
+                    </a>
+                </li>
+            ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['job'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 58
+        echo "        </ul>
+    </div>
+
     <div id=\"content\">
         ";
-        // line 48
+        // line 62
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "session", array()), "flashbag", array()), "get", array(0 => "notice"), "method"));
         foreach ($context['_seq'] as $context["_key"] => $context["flashMessage"]) {
-            // line 49
+            // line 63
             echo "            <div class=\"flash-notice\">
                 ";
-            // line 50
+            // line 64
             echo twig_escape_filter($this->env, $context["flashMessage"], "html", null, true);
             echo "
             </div>
@@ -98,17 +130,17 @@ class __TwigTemplate_ae7e73f3b170480b83682983c9c64a797f508555ecc8f724d1ebef06dc1
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flashMessage'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 53
+        // line 67
         echo "
         ";
-        // line 54
+        // line 68
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "session", array()), "flashbag", array()), "get", array(0 => "error"), "method"));
         foreach ($context['_seq'] as $context["_key"] => $context["flashMessage"]) {
-            // line 55
+            // line 69
             echo "            <div class=\"flash-error\">
                 ";
-            // line 56
+            // line 70
             echo twig_escape_filter($this->env, $context["flashMessage"], "html", null, true);
             echo "
             </div>
@@ -117,13 +149,13 @@ class __TwigTemplate_ae7e73f3b170480b83682983c9c64a797f508555ecc8f724d1ebef06dc1
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flashMessage'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 59
+        // line 73
         echo "
         <div class=\"content\">
             ";
-        // line 61
+        // line 75
         $this->displayBlock('content', $context, $blocks);
-        // line 63
+        // line 77
         echo "        </div>
     </div>
 
@@ -131,12 +163,12 @@ class __TwigTemplate_ae7e73f3b170480b83682983c9c64a797f508555ecc8f724d1ebef06dc1
         <div class=\"content\">
           <span class=\"symfony\">
             <img src=\"";
-        // line 69
+        // line 83
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/ensmanon/images/jobeet-mini.png"), "html", null, true);
         echo "\" />
             powered by <a href=\"http://www.symfony.com/\">
               <img src=\"";
-        // line 71
+        // line 85
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/ensmanon/images/symfony.gif"), "html", null, true);
         echo "\" alt=\"symfony framework\" />
             </a>
@@ -179,10 +211,10 @@ class __TwigTemplate_ae7e73f3b170480b83682983c9c64a797f508555ecc8f724d1ebef06dc1
         echo "    ";
     }
 
-    // line 61
+    // line 75
     public function block_content($context, array $blocks = array())
     {
-        // line 62
+        // line 76
         echo "            ";
     }
 
@@ -198,7 +230,7 @@ class __TwigTemplate_ae7e73f3b170480b83682983c9c64a797f508555ecc8f724d1ebef06dc1
 
     public function getDebugInfo()
     {
-        return array (  186 => 62,  183 => 61,  179 => 14,  176 => 13,  169 => 11,  166 => 10,  161 => 6,  158 => 5,  140 => 71,  135 => 69,  127 => 63,  125 => 61,  121 => 59,  112 => 56,  109 => 55,  105 => 54,  102 => 53,  93 => 50,  90 => 49,  86 => 48,  64 => 29,  54 => 22,  50 => 21,  40 => 15,  37 => 13,  35 => 10,  31 => 8,  29 => 5,  23 => 1,);
+        return array (  218 => 76,  215 => 75,  211 => 14,  208 => 13,  201 => 11,  198 => 10,  193 => 6,  190 => 5,  172 => 85,  167 => 83,  159 => 77,  157 => 75,  153 => 73,  144 => 70,  141 => 69,  137 => 68,  134 => 67,  125 => 64,  122 => 63,  118 => 62,  112 => 58,  100 => 54,  96 => 53,  95 => 52,  92 => 51,  88 => 50,  64 => 29,  54 => 22,  50 => 21,  40 => 15,  37 => 13,  35 => 10,  31 => 8,  29 => 5,  23 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -245,6 +277,20 @@ class __TwigTemplate_ae7e73f3b170480b83682983c9c64a797f508555ecc8f724d1ebef06dc1
 /*                 </div>*/
 /*             </div>*/
 /*         </div>*/
+/*     </div>*/
+/* */
+/*     <div id="job_history">*/
+/*         Recent viewed jobs:*/
+/*         <ul>*/
+/*             {% for job in app.session.get('job_history') %}*/
+/*                 <li>*/
+/*                     <a href="{{ path('job_show', { 'id': job.id, 'company': job.companyslug,*/
+/*                         'location': job.locationslug, 'position': job.positionslug }) }}">*/
+/*                         {{ job.position }} - {{ job.company }}*/
+/*                     </a>*/
+/*                 </li>*/
+/*             {% endfor %}*/
+/*         </ul>*/
 /*     </div>*/
 /* */
 /*     <div id="content">*/

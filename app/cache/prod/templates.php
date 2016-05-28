@@ -219,10 +219,12 @@
   '::base.html.twig' => 'C:\\wamp\\www\\jobeet\\app/Resources\\views/base.html.twig',
   ':category:show.html.twig' => 'C:\\wamp\\www\\jobeet\\app/Resources\\views/category/show.html.twig',
   ':default:index.html.twig' => 'C:\\wamp\\www\\jobeet\\app/Resources\\views/default/index.html.twig',
+  ':default:login.html.twig' => 'C:\\wamp\\www\\jobeet\\app/Resources\\views/default/login.html.twig',
   ':job:admin.html.twig' => 'C:\\wamp\\www\\jobeet\\app/Resources\\views/job/admin.html.twig',
   ':job:edit.html.twig' => 'C:\\wamp\\www\\jobeet\\app/Resources\\views/job/edit.html.twig',
   ':job:index.html.twig' => 'C:\\wamp\\www\\jobeet\\app/Resources\\views/job/index.html.twig',
   ':job:list.html.twig' => 'C:\\wamp\\www\\jobeet\\app/Resources\\views/job/list.html.twig',
   ':job:new.html.twig' => 'C:\\wamp\\www\\jobeet\\app/Resources\\views/job/new.html.twig',
   ':job:show.html.twig' => 'C:\\wamp\\www\\jobeet\\app/Resources\\views/job/show.html.twig',
+  ':jobAdmin:list_image.html.twig' => 'C:\\wamp\\www\\jobeet\\app/Resources\\views/jobAdmin/list_image.html.twig',
 );

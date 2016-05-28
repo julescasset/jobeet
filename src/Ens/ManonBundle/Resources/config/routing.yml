@@ -9,3 +9,13 @@ ens_manon_category:
 ens_manon_homepage:
     path:     /
     defaults: { _controller: EnsManonBundle:Job:index }
+
+login:
+    path:   /login
+    defaults:  { _controller: EnsManonBundle:Default:login }
+
+login_check:
+    path:   /login_check
+
+logout:
+    path:   /logout
