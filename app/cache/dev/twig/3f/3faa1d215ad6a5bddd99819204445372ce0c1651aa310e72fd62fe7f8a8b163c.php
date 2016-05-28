@@ -22,20 +22,20 @@ class __TwigTemplate_27e35a8294a2f6174e3209d2b14750d983aa93ab241544b22611ed3777d
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_1cbfc167c6675fc75fa9a3eff59ef7cb4a0a7f958bfa9ec00c84cc2594a9878d = $this->env->getExtension("native_profiler");
-        $__internal_1cbfc167c6675fc75fa9a3eff59ef7cb4a0a7f958bfa9ec00c84cc2594a9878d->enter($__internal_1cbfc167c6675fc75fa9a3eff59ef7cb4a0a7f958bfa9ec00c84cc2594a9878d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "job/index.html.twig"));
+        $__internal_787f7f1eea451f98d230b6c8ca8903d80d29e9e76ad5caf38691fea3216b9546 = $this->env->getExtension("native_profiler");
+        $__internal_787f7f1eea451f98d230b6c8ca8903d80d29e9e76ad5caf38691fea3216b9546->enter($__internal_787f7f1eea451f98d230b6c8ca8903d80d29e9e76ad5caf38691fea3216b9546_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "job/index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_1cbfc167c6675fc75fa9a3eff59ef7cb4a0a7f958bfa9ec00c84cc2594a9878d->leave($__internal_1cbfc167c6675fc75fa9a3eff59ef7cb4a0a7f958bfa9ec00c84cc2594a9878d_prof);
+        $__internal_787f7f1eea451f98d230b6c8ca8903d80d29e9e76ad5caf38691fea3216b9546->leave($__internal_787f7f1eea451f98d230b6c8ca8903d80d29e9e76ad5caf38691fea3216b9546_prof);
 
     }
 
     // line 3
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_74b88574c23ebaa8d7a821ed76cdda1513d87155e32e6b9517e1866bb489f4f2 = $this->env->getExtension("native_profiler");
-        $__internal_74b88574c23ebaa8d7a821ed76cdda1513d87155e32e6b9517e1866bb489f4f2->enter($__internal_74b88574c23ebaa8d7a821ed76cdda1513d87155e32e6b9517e1866bb489f4f2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_61d0f2c4c876a580c8230f53e41dfc33a91f3eb3e8491c439e8b55a0e2378b20 = $this->env->getExtension("native_profiler");
+        $__internal_61d0f2c4c876a580c8230f53e41dfc33a91f3eb3e8491c439e8b55a0e2378b20->enter($__internal_61d0f2c4c876a580c8230f53e41dfc33a91f3eb3e8491c439e8b55a0e2378b20_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 4
         echo "    ";
@@ -47,15 +47,15 @@ class __TwigTemplate_27e35a8294a2f6174e3209d2b14750d983aa93ab241544b22611ed3777d
         echo "\" type=\"text/css\" media=\"all\" />
 ";
         
-        $__internal_74b88574c23ebaa8d7a821ed76cdda1513d87155e32e6b9517e1866bb489f4f2->leave($__internal_74b88574c23ebaa8d7a821ed76cdda1513d87155e32e6b9517e1866bb489f4f2_prof);
+        $__internal_61d0f2c4c876a580c8230f53e41dfc33a91f3eb3e8491c439e8b55a0e2378b20->leave($__internal_61d0f2c4c876a580c8230f53e41dfc33a91f3eb3e8491c439e8b55a0e2378b20_prof);
 
     }
 
     // line 8
     public function block_content($context, array $blocks = array())
     {
-        $__internal_dcb03a1f406eedc1f0955c48ca7120d2a3ea32edae5c0573f00612273326d652 = $this->env->getExtension("native_profiler");
-        $__internal_dcb03a1f406eedc1f0955c48ca7120d2a3ea32edae5c0573f00612273326d652->enter($__internal_dcb03a1f406eedc1f0955c48ca7120d2a3ea32edae5c0573f00612273326d652_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_4372840b6d87fd42b954d5be9a04f571eb8281ce4c935e3c6231cc318b15b75f = $this->env->getExtension("native_profiler");
+        $__internal_4372840b6d87fd42b954d5be9a04f571eb8281ce4c935e3c6231cc318b15b75f->enter($__internal_4372840b6d87fd42b954d5be9a04f571eb8281ce4c935e3c6231cc318b15b75f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 9
         echo "    <div id=\"jobs\">
@@ -83,7 +83,10 @@ class __TwigTemplate_27e35a8294a2f6174e3209d2b14750d983aa93ab241544b22611ed3777d
             echo "\">
                 <div class=\"category\">
                     <div class=\"feed\">
-                        <a href=\"\">Feed</a>
+                        <a href=\"";
+            // line 14
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("category_show", array("slug" => $this->getAttribute($context["category"], "slug", array()), "_format" => "atom")), "html", null, true);
+            echo "\">Feed</a>
                     </div>
                     <h1><a href=\"";
             // line 16
@@ -129,7 +132,7 @@ class __TwigTemplate_27e35a8294a2f6174e3209d2b14750d983aa93ab241544b22611ed3777d
         echo "    </div>
 ";
         
-        $__internal_dcb03a1f406eedc1f0955c48ca7120d2a3ea32edae5c0573f00612273326d652->leave($__internal_dcb03a1f406eedc1f0955c48ca7120d2a3ea32edae5c0573f00612273326d652_prof);
+        $__internal_4372840b6d87fd42b954d5be9a04f571eb8281ce4c935e3c6231cc318b15b75f->leave($__internal_4372840b6d87fd42b954d5be9a04f571eb8281ce4c935e3c6231cc318b15b75f_prof);
 
     }
 
@@ -145,7 +148,7 @@ class __TwigTemplate_27e35a8294a2f6174e3209d2b14750d983aa93ab241544b22611ed3777d
 
     public function getDebugInfo()
     {
-        return array (  129 => 27,  114 => 25,  105 => 21,  102 => 20,  99 => 19,  97 => 18,  90 => 16,  81 => 11,  64 => 10,  61 => 9,  55 => 8,  46 => 5,  41 => 4,  35 => 3,  11 => 1,);
+        return array (  132 => 27,  117 => 25,  108 => 21,  105 => 20,  102 => 19,  100 => 18,  93 => 16,  88 => 14,  81 => 11,  64 => 10,  61 => 9,  55 => 8,  46 => 5,  41 => 4,  35 => 3,  11 => 1,);
     }
 }
 /* {% extends 'EnsManonBundle::layout.html.twig' %}*/
@@ -161,7 +164,7 @@ class __TwigTemplate_27e35a8294a2f6174e3209d2b14750d983aa93ab241544b22611ed3777d
 /*             <div class="category_{{ category.slug }}">*/
 /*                 <div class="category">*/
 /*                     <div class="feed">*/
-/*                         <a href="">Feed</a>*/
+/*                         <a href="{{ path('category_show', { 'slug': category.slug, '_format': 'atom' }) }}">Feed</a>*/
 /*                     </div>*/
 /*                     <h1><a href="{{ path('category_show', { 'slug': category.slug }) }}">{{ category.name }}</a></h1>*/
 /*                 </div>*/
