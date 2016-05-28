@@ -15,8 +15,8 @@ class __TwigTemplate_db34737ad055866766c26c56ac6761349cb79a0cb52c82409e79e1f160d
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_b3a11d7d81e00fc59c0f58e41fddb396b0326454ad27cd9b04035f7a4a12a7cb = $this->env->getExtension("native_profiler");
-        $__internal_b3a11d7d81e00fc59c0f58e41fddb396b0326454ad27cd9b04035f7a4a12a7cb->enter($__internal_b3a11d7d81e00fc59c0f58e41fddb396b0326454ad27cd9b04035f7a4a12a7cb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@SonataAdmin/CRUD/base_list_inner_row.html.twig"));
+        $__internal_8a53330e724a99d064688f55bd626c37a130fcc2bee01d182e287e88c7905230 = $this->env->getExtension("native_profiler");
+        $__internal_8a53330e724a99d064688f55bd626c37a130fcc2bee01d182e287e88c7905230->enter($__internal_8a53330e724a99d064688f55bd626c37a130fcc2bee01d182e287e88c7905230_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@SonataAdmin/CRUD/base_list_inner_row.html.twig"));
 
         // line 11
         echo "
@@ -49,7 +49,7 @@ class __TwigTemplate_db34737ad055866766c26c56ac6761349cb79a0cb52c82409e79e1f160d
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['field_description'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         
-        $__internal_b3a11d7d81e00fc59c0f58e41fddb396b0326454ad27cd9b04035f7a4a12a7cb->leave($__internal_b3a11d7d81e00fc59c0f58e41fddb396b0326454ad27cd9b04035f7a4a12a7cb_prof);
+        $__internal_8a53330e724a99d064688f55bd626c37a130fcc2bee01d182e287e88c7905230->leave($__internal_8a53330e724a99d064688f55bd626c37a130fcc2bee01d182e287e88c7905230_prof);
 
     }
 

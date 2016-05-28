@@ -1,7 +1,7 @@
 <?php
 
 /* SonataAdminBundle:Core:user_block.html.twig */
-class __TwigTemplate_f02d7311c924e4582f54c74e642191d20f53cc2290f5fe4bd3a8ef8abd167bbe extends Twig_Template
+class __TwigTemplate_bf948160fed6492e5e72489da8099f0d52fe8b5e85d15fe24f8df5207e35d5a2 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
@@ -22,6 +22,9 @@ class __TwigTemplate_f02d7311c924e4582f54c74e642191d20f53cc2290f5fe4bd3a8ef8abd1
 
     public function block_user_block($context, array $blocks = array())
     {
+        echo "<a href=\"";
+        echo $this->env->getExtension('routing')->getPath("logout");
+        echo "\">Logout</a>";
     }
 
     public function getTemplateName()
@@ -34,5 +37,4 @@ class __TwigTemplate_f02d7311c924e4582f54c74e642191d20f53cc2290f5fe4bd3a8ef8abd1
         return array (  20 => 1,);
     }
 }
-/* {% block user_block %}{# Customize this value #}{% endblock %}*/
-/* */
+/* {% block user_block %}<a href="{{ path('logout') }}">Logout</a>{% endblock %}*/

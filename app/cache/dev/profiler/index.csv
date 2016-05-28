@@ -1,1 +1,4 @@
-933b7d,127.0.0.1,GET,http://jobeet.local/app_dev.php/,1464464225,,200
+939abc,127.0.0.1,GET,http://jobeet.local/app_dev.php/admin/dashboard,1464464645,,302
+54f0f4,127.0.0.1,GET,http://jobeet.local/app_dev.php/login,1464464645,,200
+197402,127.0.0.1,POST,http://jobeet.local/app_dev.php/login_check,1464464648,,302
+d95fc9,127.0.0.1,GET,http://jobeet.local/app_dev.php/admin/dashboard,1464464650,,200
